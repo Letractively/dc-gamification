@@ -1,0 +1,36 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxMenu runat="server" AutoSeparators="RootOnly" ItemSpacing="5px" SeparatorHeight="100%" SpriteCssFilePath="{0}/sprite.css" CssPostfix="dcUniverse" CssFilePath="{0}/styles.css" Height="35px" BackColor="Transparent">
+<HorizontalPopOutImage>
+<SpriteProperties HottrackedCssClass="dxWeb_mHorizontalPopOutHover_dcUniverse"></SpriteProperties>
+</HorizontalPopOutImage>
+
+<VerticalPopOutImage>
+<SpriteProperties HottrackedCssClass="dxWeb_mVerticalPopOutHover_dcUniverse"></SpriteProperties>
+</VerticalPopOutImage>
+
+<VerticalPopOutRtlImage>
+<SpriteProperties HottrackedCssClass="dxWeb_mVerticalPopOutHoverRtl_dcUniverse"></SpriteProperties>
+</VerticalPopOutRtlImage>
+
+<ScrollUpButtonImage>
+<SpriteProperties HottrackedCssClass="dxWeb_mScrollUpHover_dcUniverse"></SpriteProperties>
+</ScrollUpButtonImage>
+
+<ScrollDownButtonImage>
+<SpriteProperties HottrackedCssClass="dxWeb_mScrollDownHover_dcUniverse"></SpriteProperties>
+</ScrollDownButtonImage>
+
+<LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+<ItemStyle Width="200px"></ItemStyle>
+
+<SubMenuStyle GutterWidth="0px">
+<BackgroundImage ImageUrl="Web/bg.png" Repeat="NoRepeat"></BackgroundImage>
+</SubMenuStyle>
+
+<Border BorderColor="Transparent"></Border>
+
+<DisabledStyle ForeColor="Black"></DisabledStyle>
+</dx:ASPxMenu>

@@ -1,0 +1,645 @@
+.dxEditors_edtError_dcUniverse,
+.dxEditors_edtCalendarPrevYear_dcUniverse,
+.dxEditors_edtCalendarPrevYearDisabled_dcUniverse,
+.dxEditors_edtCalendarPrevMonth_dcUniverse,
+.dxEditors_edtCalendarPrevMonthDisabled_dcUniverse,
+.dxEditors_edtCalendarNextMonth_dcUniverse,
+.dxEditors_edtCalendarNextMonthDisabled_dcUniverse,
+.dxEditors_edtCalendarNextYear_dcUniverse,
+.dxEditors_edtCalendarNextYearDisabled_dcUniverse,
+.dxEditors_edtCalendarFNPrevYear_dcUniverse,
+.dxEditors_edtCalendarFNNextYear_dcUniverse,
+.dxEditors_edtRadioButtonChecked_dcUniverse,
+.dxEditors_edtRadioButtonUnchecked_dcUniverse,
+.dxEditors_edtRadioButtonCheckedDisabled_dcUniverse,
+.dxEditors_edtRadioButtonUncheckedDisabled_dcUniverse,
+.dxEditors_edtEllipsis_dcUniverse,
+.dxEditors_edtEllipsisDisabled_dcUniverse,
+.dxEditors_edtDropDown_dcUniverse,
+.dxEditors_edtDropDownDisabled_dcUniverse,
+.dxEditors_edtDETSClockFace_dcUniverse,
+.dxEditors_edtDETSHourHand_dcUniverse,
+.dxEditors_edtDETSMinuteHand_dcUniverse,
+.dxEditors_edtDETSSecondHand_dcUniverse,
+.dxEditors_edtSpinEditIncrementImage_dcUniverse,
+.dxEditors_edtSpinEditIncrementImageDisabled_dcUniverse,
+.dxEditors_edtSpinEditDecrementImage_dcUniverse,
+.dxEditors_edtSpinEditDecrementImageDisabled_dcUniverse,
+.dxEditors_edtSpinEditLargeIncImage_dcUniverse,
+.dxEditors_edtSpinEditLargeIncImageDisabled_dcUniverse,
+.dxEditors_edtSpinEditLargeDecImage_dcUniverse,
+.dxEditors_edtSpinEditLargeDecImageDisabled_dcUniverse,
+.dxEditors_fcadd_dcUniverse,
+.dxEditors_fcaddhot_dcUniverse,
+.dxEditors_fcremove_dcUniverse,
+.dxEditors_fcremovehot_dcUniverse,
+.dxEditors_fcgroupaddcondition_dcUniverse,
+.dxEditors_fcgroupaddgroup_dcUniverse,
+.dxEditors_fcgroupremove_dcUniverse,
+.dxEditors_fcopany_dcUniverse,
+.dxEditors_fcopbegin_dcUniverse,
+.dxEditors_fcopbetween_dcUniverse,
+.dxEditors_fcopcontain_dcUniverse,
+.dxEditors_fcopnotcontain_dcUniverse,
+.dxEditors_fcopnotequal_dcUniverse,
+.dxEditors_fcopend_dcUniverse,
+.dxEditors_fcopequal_dcUniverse,
+.dxEditors_fcopgreater_dcUniverse,
+.dxEditors_fcopgreaterorequal_dcUniverse,
+.dxEditors_fcopnotblank_dcUniverse,
+.dxEditors_fcopblank_dcUniverse,
+.dxEditors_fcopless_dcUniverse,
+.dxEditors_fcoplessorequal_dcUniverse,
+.dxEditors_fcoplike_dcUniverse,
+.dxEditors_fcopnotany_dcUniverse,
+.dxEditors_fcopnotbetween_dcUniverse,
+.dxEditors_fcopnotlike_dcUniverse,
+.dxEditors_fcgroupand_dcUniverse,
+.dxEditors_fcgroupor_dcUniverse,
+.dxEditors_fcgroupnotand_dcUniverse,
+.dxEditors_fcgroupnotor_dcUniverse,
+.dxEditors_caRefresh_dcUniverse,
+.dxEditors_edtTBDecBtn_dcUniverse,
+.dxEditors_edtTBIncBtn_dcUniverse,
+.dxEditors_edtTBMainDH_dcUniverse,
+.dxEditors_edtTBSecondaryDH_dcUniverse,
+.dxEditors_edtTBIncBtnDisabled_dcUniverse,
+.dxEditors_edtTBDecBtnDisabled_dcUniverse,
+.dxEditors_edtTBMainDHDisabled_dcUniverse,
+.dxEditors_edtTBSecondaryDHDisabled_dcUniverse
+{
+	background: transparent url('sprite.png') no-repeat;
+	-background-image: url('sprite.gif');
+}
+
+/* TrackBar */
+.dxEditors_edtTBDecBtn_dcUniverse, .dxEditors_edtTBIncBtn_dcUniverse,
+.dxEditors_edtTBDecBtnHover_dcUniverse, .dxEditors_edtTBIncBtnHover_dcUniverse,
+.dxEditors_edtTBDecBtnPressed_dcUniverse, .dxEditors_edtTBIncBtnPressed_dcUniverse,
+.dxEditors_edtTBDecBtnDisabled_dcUniverse, .dxEditors_edtTBIncBtnDisabled_dcUniverse
+{
+	width: 20px;
+	height: 20px;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDH_dcUniverse, .dxeTBHSys .dxEditors_edtTBSecondaryDH_dcUniverse,
+.dxeTBHSys .dxEditors_edtTBMainDHHover_dcUniverse, .dxeTBHSys .dxEditors_edtTBSecondaryDHHover_dcUniverse,
+.dxeTBHSys .dxEditors_edtTBMainDHPressed_dcUniverse, .dxeTBHSys .dxEditors_edtTBSecondaryDHPressed_dcUniverse,
+.dxeTBHSys .dxEditors_edtTBMainDHDisabled_dcUniverse, .dxeTBHSys .dxEditors_edtTBSecondaryDHDisabled_dcUniverse
+{
+	width:7px;
+	height:12px;
+}
+.dxeTBVSys .dxEditors_edtTBMainDH_dcUniverse, .dxeTBVSys .dxEditors_edtTBSecondaryDH_dcUniverse,
+.dxeTBVSys .dxEditors_edtTBMainDHHover_dcUniverse, .dxeTBVSys .dxEditors_edtTBSecondaryDHHover_dcUniverse,
+.dxeTBVSys .dxEditors_edtTBMainDHPressed_dcUniverse, .dxeTBVSys .dxEditors_edtTBSecondaryDHPressed_dcUniverse,
+.dxeTBVSys .dxEditors_edtTBMainDHDisabled_dcUniverse, .dxeTBVSys .dxEditors_edtTBSecondaryDHDisabled_dcUniverse
+{
+	width:12px;
+	height:7px;
+}
+
+.dxEditors_edtTBDecBtn_dcUniverse 
+{
+	background-position: -0px -148px;
+}
+.dxEditors_edtTBDecBtnHover_dcUniverse
+{
+	background-position: -44px -148px;
+}
+.dxEditors_edtTBDecBtnPressed_dcUniverse
+{
+	background-position: -87px -148px;
+}
+.dxEditors_edtTBDecBtnDisabled_dcUniverse
+{
+	background-position: -131px -148px;
+}
+
+.dxEditors_edtTBIncBtn_dcUniverse
+{
+	background-position: -22px -148px;
+}
+.dxEditors_edtTBIncBtnHover_dcUniverse
+{
+	background-position: -66px -148px;
+}
+.dxEditors_edtTBIncBtnPressed_dcUniverse
+{ 
+	background-position: -109px -148px;
+}
+.dxEditors_edtTBIncBtnDisabled_dcUniverse
+{ 
+	background-position: -153px -148px;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDH_dcUniverse, 
+.dxeTBHSys .dxEditors_edtTBSecondaryDH_dcUniverse
+{
+	background-position: -19px -128px;
+}
+.dxeTBHSys .dxEditors_edtTBMainDHHover_dcUniverse,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHHover_dcUniverse
+{
+	background-position: -32px -128px;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDHDisabled_dcUniverse,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHDisabled_dcUniverse
+{
+	background-position: -58px -128px;
+}
+.dxeTBVSys .dxEditors_edtTBMainDH_dcUniverse,
+.dxeTBVSys .dxEditors_edtTBSecondaryDH_dcUniverse
+{
+	background-position: -116px -127px;
+}
+
+.dxeTBVSys .dxEditors_edtTBMainDHHover_dcUniverse,
+.dxeTBVSys .dxEditors_edtTBSecondaryDHHover_dcUniverse
+{
+	background-position: -116px -140px;
+}
+
+.dxeTBVSys .dxEditors_edtTBMainDHPressed_dcUniverse,
+.dxeTBVSys .dxEditors_edtTBSecondaryDHPressed_dcUniverse
+{
+	background-position: -136px -127px;
+	z-index: 7;
+}
+.dxeTBHSys .dxEditors_edtTBMainDHPressed_dcUniverse,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHPressed_dcUniverse
+{
+	background-position: -45px -128px;
+	z-index: 7;
+}
+.dxeTBVSys .dxEditors_edtTBMainDHDisabled_dcUniverse, 
+.dxeTBVSys .dxEditors_edtTBSecondaryDHDisabled_dcUniverse
+{
+	background-position: -136px -140px;
+}
+
+.dxeFocused_dcUniverse .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDH_dcUniverse, 
+.dxeFocused_dcUniverse .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDH_dcUniverse
+{
+	background-position: -156px -127px;
+}
+.dxeFocused_dcUniverse .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHHover_dcUniverse,
+.dxeFocused_dcUniverse .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHHover_dcUniverse
+{
+	background-position: -156px -140px;
+}
+.dxeFocused_dcUniverse .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHPressed_dcUniverse,
+.dxeFocused_dcUniverse .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHPressed_dcUniverse
+{
+	background-position: -177px -127px;
+}
+.dxeFocused_dcUniverse .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDH_dcUniverse,
+.dxeFocused_dcUniverse .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDH_dcUniverse
+{
+	background-position: -71px -128px;
+}
+.dxeFocused_dcUniverse .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHHover_dcUniverse,
+.dxeFocused_dcUniverse .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHHover_dcUniverse
+{
+	background-position: -85px -128px;
+}
+.dxeFocused_dcUniverse .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHPressed_dcUniverse,
+.dxeFocused_dcUniverse .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHPressed_dcUniverse
+{
+	background-position: -100px -128px;
+}
+
+/* RadioButton */
+.dxEditors_edtRadioButtonChecked_dcUniverse,
+.dxEditors_edtRadioButtonUnchecked_dcUniverse,
+.dxEditors_edtRadioButtonCheckedDisabled_dcUniverse,
+.dxEditors_edtRadioButtonUncheckedDisabled_dcUniverse {
+	width: 16px;
+	height: 16px;
+}
+.dxEditors_edtRadioButtonUnchecked_dcUniverse {
+    background-position: 0px -40px;
+}
+.dxEditors_edtRadioButtonChecked_dcUniverse {
+    background-position: -16px -40px;
+}
+.dxEditors_edtRadioButtonUncheckedDisabled_dcUniverse {
+    background-position: -33px -40px;
+}
+.dxEditors_edtRadioButtonCheckedDisabled_dcUniverse {
+    background-position: -49px -40px;
+}
+
+.dxEditors_edtError_dcUniverse,
+.dxEditors_edtCalendarPrevYear_dcUniverse,
+.dxEditors_edtCalendarPrevYearDisabled_dcUniverse,
+.dxEditors_edtCalendarPrevMonth_dcUniverse,
+.dxEditors_edtCalendarPrevMonthDisabled_dcUniverse,
+.dxEditors_edtCalendarNextMonth_dcUniverse,
+.dxEditors_edtCalendarNextMonthDisabled_dcUniverse,
+.dxEditors_edtCalendarNextYear_dcUniverse,
+.dxEditors_edtCalendarNextYearDisabled_dcUniverse,
+.dxEditors_edtCalendarFNPrevYear_dcUniverse,
+.dxEditors_edtCalendarFNNextYear_dcUniverse,
+.dxEditors_edtEllipsis_dcUniverse,
+.dxEditors_edtEllipsisDisabled_dcUniverse,
+.dxEditors_edtDropDown_dcUniverse,
+.dxEditors_edtDropDownDisabled_dcUniverse,
+.dxEditors_edtSpinEditIncrementImage_dcUniverse,
+.dxEditors_edtSpinEditIncrementImageDisabled_dcUniverse,
+.dxEditors_edtSpinEditDecrementImage_dcUniverse,
+.dxEditors_edtSpinEditDecrementImageDisabled_dcUniverse,
+.dxEditors_edtSpinEditLargeIncImage_dcUniverse,
+.dxEditors_edtSpinEditLargeIncImageDisabled_dcUniverse,
+.dxEditors_edtSpinEditLargeDecImage_dcUniverse,
+.dxEditors_edtSpinEditLargeDecImageDisabled_dcUniverse
+{
+	display:block;
+	margin:auto;
+}
+
+.dxEditors_edtError_dcUniverse {
+    background-position: -170px 0px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtCalendarPrevYear_dcUniverse {
+    background-position: -2px -170px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarPrevYearDisabled_dcUniverse {
+    background-position: -2px -196px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarPrevMonth_dcUniverse {
+    background-position: -28px -170px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarPrevMonthDisabled_dcUniverse {
+    background-position: -28px -196px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarNextMonth_dcUniverse {
+    background-position: -54px -170px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarNextMonthDisabled_dcUniverse {
+    background-position: -54px -196px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarNextYear_dcUniverse {
+    background-position: -80px -170px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarNextYearDisabled_dcUniverse {
+    background-position: -80px -196px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarFNPrevYear_dcUniverse {
+    background-position: -28px -170px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtCalendarFNNextYear_dcUniverse {
+    background-position: -54px -170px;
+    width: 24px;
+    height: 24px;
+}
+
+.dxEditors_edtEllipsis_dcUniverse {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 14px;
+}
+
+.dxEditors_edtEllipsisDisabled_dcUniverse {
+    background-position: 0px -22px;
+    width: 11px;
+    height: 14px;
+}
+
+.dxeButtonEditButtonHover_dcUniverse .dxEditors_edtEllipsis_dcUniverse,
+.dxeButtonEditButtonPressed_dcUniverse .dxEditors_edtEllipsis_dcUniverse {
+    background-position: -12px 0px;
+    width: 11px;
+    height: 14px;
+}
+
+.dxEditors_edtDropDown_dcUniverse {
+    background-position: -25px 0px;
+    width: 10px;
+    height: 14px;
+}
+
+.dxeButtonEditButtonHover_dcUniverse .dxEditors_edtDropDown_dcUniverse,
+.dxeButtonEditButtonPressed_dcUniverse .dxEditors_edtDropDown_dcUniverse {
+    background-position: -13px -22px;
+    width: 10px;
+    height: 14px;
+}
+
+.dxEditors_edtDropDownDisabled_dcUniverse {
+    background-position: -25px -22px;
+    width: 10px;
+    height: 14px;
+}
+
+.dxEditors_edtSpinEditIncrementImage_dcUniverse {
+    background-position: -150px 0px;
+    width: 10px;
+    height: 5px;
+}
+
+.dxeSpinIncButtonHover_dcUniverse .dxEditors_edtSpinEditIncrementImage_dcUniverse,
+.dxeSpinIncButtonPressed_dcUniverse .dxEditors_edtSpinEditIncrementImage_dcUniverse
+{
+    background-position: -114px -13px;
+}
+
+.dxEditors_edtSpinEditIncrementImageDisabled_dcUniverse {
+    background-position: -150px -13px;
+    width: 10px;
+    height: 5px;
+}
+
+
+.dxEditors_edtSpinEditDecrementImage_dcUniverse {
+    background-position: -132px 0px;
+    width: 10px;
+    height: 5px;
+}
+
+.dxeSpinDecButtonHover_dcUniverse .dxEditors_edtSpinEditDecrementImage_dcUniverse,
+.dxeSpinDecButtonPressed_dcUniverse .dxEditors_edtSpinEditDecrementImage_dcUniverse
+{
+    background-position: -114px 0px;
+}
+
+.dxEditors_edtSpinEditDecrementImageDisabled_dcUniverse {
+    background-position: -132px -13px;
+    width: 10px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditLargeIncImage_dcUniverse {
+    background-position: -146px -26px;
+    width: 4px;
+    height: 7px;
+}
+
+.dxeSpinLargeIncButtonHover_dcUniverse .dxEditors_edtSpinEditLargeIncImage_dcUniverse,
+.dxeSpinLargeIncButtonPressed_dcUniverse .dxEditors_edtSpinEditLargeIncImage_dcUniverse
+{
+    background-position: -118px -26px;
+}
+
+.dxEditors_edtSpinEditLargeIncImageDisabled_dcUniverse {
+    background-position: -171px -26px;
+    width: 4px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditLargeDecImage_dcUniverse {
+    background-position: -132px -26px;
+    width: 4px;
+    height: 7px;
+}
+
+.dxeSpinLargeDecButtonHover_dcUniverse .dxEditors_edtSpinEditLargeDecImage_dcUniverse,
+.dxeSpinLargeDecButtonPressed_dcUniverse .dxEditors_edtSpinEditLargeDecImage_dcUniverse
+{
+    background-position: -104px -26px;
+}
+
+.dxEditors_edtSpinEditLargeDecImageDisabled_dcUniverse {
+    background-position: -158px -26px;
+    width: 4px;
+    height: 7px;
+}
+
+.dxEditors_fcadd_dcUniverse {
+    background-position: 0px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcaddhot_dcUniverse {
+    background-position: -21px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremove_dcUniverse {
+    background-position: -42px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremovehot_dcUniverse {
+    background-position: -63px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddcondition_dcUniverse {
+    background-position: -168px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddgroup_dcUniverse {
+    background-position: -147px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupremove_dcUniverse {
+    background-position: -126px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopany_dcUniverse {
+    background-position: 0px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbegin_dcUniverse {
+    background-position: -42px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbetween_dcUniverse {
+    background-position: -84px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopcontain_dcUniverse {
+    background-position: -105px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotcontain_dcUniverse {
+    background-position: -147px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotequal_dcUniverse {
+    background-position: -168px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopend_dcUniverse {
+    background-position: -63px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopequal_dcUniverse {
+    background-position: 0px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreater_dcUniverse {
+    background-position: -21px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreaterorequal_dcUniverse {
+    background-position: -42px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotblank_dcUniverse {
+    background-position: -105px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopblank_dcUniverse {
+    background-position: -126px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopless_dcUniverse {
+    background-position: -63px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplessorequal_dcUniverse {
+    background-position: -84px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplike_dcUniverse {
+    background-position: -126px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotany_dcUniverse {
+    background-position: -21px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotbetween_dcUniverse {
+    background-position: -147px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotlike_dcUniverse {
+    background-position: -168px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupand_dcUniverse {
+    background-position: -84px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupor_dcUniverse {
+    background-position: -168px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotand_dcUniverse {
+    background-position: -105px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotor_dcUniverse {
+    background-position: -147px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_caRefresh_dcUniverse {	
+	background-position: -106px -170px;
+	width: 24px;
+	height: 24px;
+}
+
+.dxEditors_edtDETSClockFace_dcUniverse
+{
+    background-position: -2px -224px;
+    width: 107px;
+    height: 107px;
+}
+
+.dxEditors_edtDETSHourHand_dcUniverse
+{
+    background-position: -123px -224px;
+    width: 7px;
+    height: 64px;
+}
+
+.dxEditors_edtDETSMinuteHand_dcUniverse
+{
+    background-position: -116px -224px;
+    width: 7px;
+    height: 64px;
+}
+
+.dxEditors_edtDETSSecondHand_dcUniverse
+{
+    background-position: -111px -224px;
+    width: 5px;
+    height: 72px;
+}
