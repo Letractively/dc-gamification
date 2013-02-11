@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="GamificationDB-Web.config Connection String" description="GamificationDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=SCIENCE;Initial Catalog=DC_Gamification;User ID=sa;Password=Password1;Application Name=DC Gamification Portal;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\Test\\DelphiDCGamificationPortal\\GamificationPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GamificationDB']/@connectionString" />
-  </parameter>
-</parameters>
