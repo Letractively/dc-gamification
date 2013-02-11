@@ -1,6 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-
-<dx:ASPxColorEdit runat="server" ShowShadow="False" Spacing="0" SpriteCssFilePath="{0}/sprite.css" CssPostfix="dcUniverse" CssFilePath="{0}/styles.css">
-</dx:ASPxColorEdit>
-

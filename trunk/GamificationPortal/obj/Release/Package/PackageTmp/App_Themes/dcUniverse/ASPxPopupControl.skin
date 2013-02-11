@@ -1,8 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPopupControl" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-
-<dx:ASPxPopupControl runat="server" SpriteCssFilePath="{0}/sprite.css" ShowShadow="False" CssPostfix="dcUniverse" CssFilePath="{0}/styles.css">
-    <LoadingPanelImage Url="Web/Loading.gif" />
-    <HeaderStyle ImageSpacing="12px" />
-</dx:ASPxPopupControl>
-
