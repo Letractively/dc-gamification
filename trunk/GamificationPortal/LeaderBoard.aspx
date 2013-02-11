@@ -15,13 +15,13 @@
     <table style="width: 100%">
         <tr>
             <td style="text-align: center;">
-                <h3 style="color: #ffffff">Current Stage</h3>
+                <h4 class="withShadow" style="color: #ffffff">Top performers in <br/>current stage</h4>
             </td>
             <td rowspan="4" style=" vertical-align: top; padding-left: 15px;">
                 <table style="width: 100%;">
                     <tr>
                         <td style="text-align: center;">
-                            <h3 style="color: #ffffff">General Statistics</h3>
+                            <h3 class="withShadow" style="color: #ffffff">General Statistics</h3>
                         </td>
                     </tr>
                     <tr>
@@ -34,7 +34,7 @@
                                         EnablePagingCallbackAnimation="True"
                                         KeyFieldName="UserId">
                                         <Columns>
-                                            <dx:GridViewDataTextColumn Caption="N" FieldName="Position" Name="MissionId" ReadOnly="True" VisibleIndex="0" Width="30px">
+                                            <dx:GridViewDataTextColumn Caption="" FieldName="Position" Name="MissionId" ReadOnly="True" VisibleIndex="0" Width="30px">
                                             </dx:GridViewDataTextColumn>
 
                                             <dx:GridViewDataTextColumn Caption="Name" Name="Name" VisibleIndex="1" FieldName="FullName" UnboundType="String">

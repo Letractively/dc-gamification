@@ -105,7 +105,7 @@
                                             Hello,
                                             <asp:LoginName runat="server" CssClass="username" FormatString="{0}" ID="LoginNameControl" />
                                             !
-                                            <asp:LoginStatus runat="server" ID="LoginStatusControl" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                            <asp:LoginStatus runat="server" ID="LoginStatusControl" LogoutAction="Redirect" LogoutText="Log out" LogoutPageUrl="~/" />
                                         </p>
                                     </LoggedInTemplate>
                                 </asp:LoginView>

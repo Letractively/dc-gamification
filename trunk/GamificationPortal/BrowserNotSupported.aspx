@@ -9,25 +9,35 @@
 <body style="padding-left: 20px;color:#ffffff; background-color: #131313; background-image: url('Images/layout/theme/supportPageBg.jpg'); background-position-x: 300px; background-position-y: 100px; background-repeat: no-repeat;">
     <table>
         <tr>
-            <td colspan="2"><h2 style="color: #ffffff; font-family: Helvetica; padding-top: 20px;">Your browser does not supported. </h2></td>
+            <td colspan="2"><h2 style="color: #ffffff; font-family: Helvetica; padding-top: 20px;">Your browser is not supported.</h2></td>
 
         </tr>
         <tr>
             
-            <td colspan="2"><h4>If you are using IE version 8 or higher please uncheck Tools >> Compatibiliy Level Setting >> "Display intranet sites in Compatibility view" </h4></td>
+            <td colspan="2"><h4>We recommend using any of the following browsers:</h4></td>
 
         </tr>
         <tr>
-            
-            <td colspan="2"><h4>We recommend to use one of the browsers listed bellow;</h4></td>
-
+            <td>
+                <ul>
+                    <li>
+                        Internet Explorer 8 or higher <br /> 
+                        (for IE 8 and 9, make sure that <b>Display intranet sites in Compatibility View</b> is not selected <br />
+                        in <b>Tools Compatibility Level Settings</b>)
+                    </li>
+                    <li>Opera 12 or higher</li>
+                    <li>Chrome 24 or higher</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             
             <td><a href="http://windows.microsoft.com/ru-RU/internet-explorer/downloads/ie-10/worldwide-languages" style="color: #00ffff">
                     <img src="Images/Browsers/IE10-logo.png" style="height: 58px; width: 202px" />
                 
-                </a></td>
+                </a>
+
+            </td>
         </tr>
         <tr>
             

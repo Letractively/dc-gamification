@@ -24,20 +24,20 @@
                                 <div class="ProfileSplashScreen_text">
                                     <h3>Welcome on board of Allstars Spacecare.</h3>
                                     <br />
-                                    From now on, this is your home. Now, you are a part of the most noble mission: to explore strange new worlds, to see new life and new civilizations, to go where no one have ever been before.</span><br />
-                                    <span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">The Allstars Spacecare ship waits for you. Be ready to follow the tradition and serve an example of courage, honor, and wisdom. </span> 
+                                    From now on, this is your home. Now, you are a part of the most noble mission: to explore strange new worlds, to see new life and new civilizations, to go where no one have ever been before.<br />
+                                    The Allstars Spacecare ship waits for you. Be ready to follow the tradition and serve an example of courage, honor, and wisdom. 
                         <br />
-                                    <span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">Learn more about our </span><span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:underline;vertical-align:baseline;">journey </span><span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">and make your input into our common mission. Select and complete the </span><span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:underline;vertical-align:baseline;">mission</span><span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"> 
-                                    to contribute into success of the whole crew. You can monitor your own missions’ status and the achievements of your fellows.</span><br />
+                                    Learn more about our  <b>journey</b> and make your input into our common mission. Select and complete the <b>mission </b>
+                                    to contribute into success of the whole crew. You can monitor your own missions’ status and the achievements of your fellows.<br />
                                     <br />
-                                    <span style="font-size:15px;font-family:Calibri;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">We are proud that you joined our team. Enough talk! Buckle down and let’s go!<br /> <br /> </span> 
+                                    We are proud that you joined our team. Enough talk! Buckle down and let’s go!<br /> <br />  
                
                 <div style="text-align: center">
                     <table style="width: 100%;">
                         <tr>
-                            <td style="text-align: right; padding-right: 10px;">Select Your Specialization :</td>
+                            <td style="text-align: right; padding-right: 10px;">Select your specialization:</td>
                             <td>
-                                <dx:ASPxComboBox ID="cbSpecialization" runat="server" OnSelectedIndexChanged="ASPxComboBox1_SelectedIndexChanged" TextField="Description" ValueField="SpecializationId">
+                                <dx:ASPxComboBox ID="cbSpecialization" runat="server" OnSelectedIndexChanged="ASPxComboBox1_SelectedIndexChanged" TextField="Description" ValueField="SpecializationId" Width="250px">
                                     
                                     <ClientSideEvents  ValueChanged="function(s, e) {
 

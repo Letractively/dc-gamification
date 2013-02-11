@@ -79,7 +79,7 @@
                         <table style="width: 100%; vertical-align: top; table-layout:fixed;">
                             <tr>
                                 <td>
-                                    <h4>Details:</h4>
+                                    <h4>Details</h4>
                                 </td>
                                
                             </tr>
@@ -90,7 +90,7 @@
                             </tr>
                             <tr>
                                  <td>
-                                    <h4>Skills Required</h4>
+                                    <h4>Skills required</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +104,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <dx:ASPxButton ID="BtnTakeMission" runat="server" OnClick="BtnTakeMission_Click" Text="Take Mission" CommandArgument='<%# Container.EvalDataItem("MissionId") %>'
+                                    <dx:ASPxButton ID="BtnTakeMission" runat="server" OnClick="BtnTakeMission_Click" Text="Take mission" CommandArgument='<%# Container.EvalDataItem("MissionId") %>'
                                         Visible='<%# !IsMissionInProgress(Container.EvalDataItem("StatusDescription")) %>'>
                                     </dx:ASPxButton>
 

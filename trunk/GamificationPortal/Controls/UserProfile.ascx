@@ -30,26 +30,26 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 50%; text-align: right; padding-right: 10px;">Missions Completed</td>
+                    <td style="width: 50%; text-align: right; padding-right: 10px;">Missions completed</td>
                     <td style="text-align: left;">
                         <dx:ASPxLabel ID="lblCompletedMissionsCount" runat="server" Text=""></dx:ASPxLabel>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 50%; text-align: right; padding-right: 10px;">Missions Failed</td>
+                    <td style="width: 50%; text-align: right; padding-right: 10px;">Missions failed</td>
                     <td style="text-align: left;">
                         <dx:ASPxLabel ID="lblFailedMissionsCount" runat="server" Text=""></dx:ASPxLabel>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 50%; text-align: right; padding-right: 10px;">Unlocked Budges</td>
+                    <td style="width: 50%; text-align: right; padding-right: 10px;">Unlocked badges</td>
                     <td style="text-align: left;">
                         <dx:ASPxLabel ID="lblUnlockedBadges" runat="server" Text=""></dx:ASPxLabel>
                         /<dx:ASPxLabel ID="lblTotalBadges" runat="server" Text=""></dx:ASPxLabel>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 50%; text-align: right; padding-right: 10px;">Unlocked Statuses</td>
+                    <td style="width: 50%; text-align: right; padding-right: 10px;">Unlocked statuses</td>
                     <td style="text-align: left;">
                         <img src="Images/SiteMap/soon.gif" /></td>
                 </tr>
@@ -61,7 +61,7 @@
             <table>
                 <tr>
                     <td>
-                        <dx:ASPxButton ID="btnChangeProfile" ClientIDMode="Static" runat="server" Text="Change Profile" align="center"></dx:ASPxButton>
+                        <dx:ASPxButton ID="btnChangeProfile" ClientIDMode="Static" runat="server" Text="Change profile" align="center"></dx:ASPxButton>
                     </td>
                     <td>
                         <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Share on Facebook" Enabled="False" align="center"></dx:ASPxButton>

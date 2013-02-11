@@ -15,7 +15,7 @@
 
 
         <header>
-            <h3>Email:</h3>
+            <h3>Email</h3>
         </header>
         <div class="mainContainerPanel">
             <div class="mainContainerBody" style="color: #000000;">
@@ -24,7 +24,7 @@
                     <span><a href="mailto:ssadur@softserveinc.com">ssadur@softserveinc.com</a></span>
                 </p>
                 <p>
-                    <span class="label">Communication Desc:</span>
+                    <span class="label">Communication Deck:</span>
                     <span><a href="mailto:omelnychuk@softserveinc.com">omelnychuk@softserveinc.com</a></span>
                 </p>
                 <p>
@@ -36,7 +36,7 @@
 
 
         <header>
-            <h3>Address:</h3>
+            <h3>Address</h3>
         </header>
         <div class="mainContainerPanel">
             <div class="mainContainerBody" style="color: #000000;">

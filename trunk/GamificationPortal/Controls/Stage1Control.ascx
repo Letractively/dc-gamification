@@ -11,6 +11,4 @@ With the recent technological advances, people build an experimental model of te
 
 <p class="content">
    It starts with the admission of the Allstars Spacecare crew members and pre-start check.
-
-    Start with begin in ??? days.
 </p>
