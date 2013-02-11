@@ -21,7 +21,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 10px;">Days on board of SS Homecare:</td>
+                    <td style="padding-right: 10px;">Days on board of Allstars Spacecare:</td>
                     <td><img src="Images/SiteMap/soon.gif" /></td>
                 </tr>
             </table>

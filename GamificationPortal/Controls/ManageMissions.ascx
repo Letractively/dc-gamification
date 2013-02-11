@@ -203,6 +203,7 @@
                         <hr />
                     </DetailRow>
                     <EditForm>
+                       
                         <dx:ASPxPanel ID="ASPxPanel1" runat="server" Width="700px" Height="500px" ScrollBars="Auto">
                             <PanelCollection>
                                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
@@ -215,7 +216,7 @@
                                         <tr>
 
                                             <td>
-                                                <dx:ASPxHtmlEditor ID="ASPxHtmlEditor1" runat="server" EnableCallbackAnimation="True" Height="300px" Width="650px"
+                                                 <dx:ASPxHtmlEditor ID="ASPxHtmlEditor1" runat="server" EnableCallbackAnimation="True" Height="300px" Width="650px"
                                                     Html='<%#Bind("Description") %>'>
                                                     <Settings AllowContextMenu="False" AllowPreview="False" />
                                                     <SettingsHtmlEditing EnterMode="BR" />

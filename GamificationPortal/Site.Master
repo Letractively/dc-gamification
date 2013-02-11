@@ -116,7 +116,7 @@
                                             <td style="text-align: center; height: 13px;">Hello, <dx:ASPxLabel ID="UserFullName"  ClientIDMode="Static" runat="server" Text="ASPxLabel"></dx:ASPxLabel>!</td>
                                                 </tr>
                                             <tr>
-                                            <td><asp:LoginStatus runat="server" ID="LoginStatusControl" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="LoginStatusControl_LoggingOut" /></td>
+                                            <td><asp:LoginStatus runat="server" ID="LoginStatusControl" LogoutAction="Redirect" LogoutText="Log out" LogoutPageUrl="~/" OnLoggingOut="LoginStatusControl_LoggingOut" /></td>
                                                 </tr>
                                         </table>
                                             
@@ -245,7 +245,7 @@
                     <td style="text-align: left;">
                         <ul>
                             <li class="first"><a href="About.aspx">About</a></li>
-                            <li><a href="Contact.aspx">Contacts Us</a></li>
+                            <li><a href="Contact.aspx">Contact Us</a></li>
                             <li><a href="SiteMap.aspx">Site Map</a></li>
                         </ul>
                     </td>
@@ -253,7 +253,7 @@
                 <tr>
                     <td>
                         <div class="float-left" style="color: #606060; font-size: 0.9em;">
-                            Copyright  © SoftServe Delphi DC Gamification 2013 
+                            Copyright © 2013 SoftServe Delphi DC Gamification  
                         </div>
                     </td>
                 </tr>

@@ -9,30 +9,30 @@
     </tr>
     
     <tr>
-        <td style="padding-right: 5px; text-align: right; width:200px;">Journey Status:</td>
+        <td style="padding-right: 5px; text-align: right; width:200px;">Journey status:</td>
         <td style="padding-left: 10px;width:200px;">Before Start Preparations</td>
     </tr>
     <tr>
-        <td style="padding-right: 5px; text-align: right;">Crew:</td>
+        <td style="padding-right: 5px; text-align: right;">Crew members:</td>
         <td style="padding-left: 10px;">
             <dx:ASPxLabel ID="lblCrewNumber" runat="server" Text=""></dx:ASPxLabel>
             </td>
     </tr>
     <tr>
-        <td style="padding-right: 5px; text-align: right;">Missions In Progress:</td>
+        <td style="padding-right: 5px; text-align: right;">Missions in progress:</td>
         <td style="padding-left: 10px;"><dx:ASPxLabel ID="lblInProgressMissionsCount" runat="server" Text=""></dx:ASPxLabel></td>
     </tr>
     <tr>
-        <td style="padding-right: 5px; text-align: right;">Missions Completed:</td>
+        <td style="padding-right: 5px; text-align: right;">Missions completed:</td>
         <td style="padding-left: 10px;"><dx:ASPxLabel ID="lblCompletedMissions" runat="server" Text=""></dx:ASPxLabel></td>
     </tr>
      <tr>
-        <td style="padding-right: 5px; text-align: right;">Next Stage Progress:</td>
+        <td style="padding-right: 5px; text-align: right;">Next stage progress:</td>
         <td style="padding-left: 10px;">
             <img src="Images/SiteMap/soon.gif" /></td>
     </tr>
     <tr>
-        <td style="padding-right: 5px; text-align: right;">Next Stage Date:</td>
+        <td style="padding-right: 5px; text-align: right;">Next stage date:</td>
         <td style="padding-left: 10px;">
             <dx:ASPxLabel ID="lblNextStageDate" runat="server" Text=""></dx:ASPxLabel></td>
     </tr>

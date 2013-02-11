@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using DevExpress.Web.ASPxEditors;
+using DevExpress.Web.ASPxHtmlEditor;
+using DevExpress.Web.ASPxPanel;
 using GamificationPortal.Account;
 using GamificationPortal.App;
 
@@ -154,6 +156,14 @@ namespace GamificationPortal.Controls
 
         protected void GridViewMissionsList_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
         {
+           
+            var htmlEditorDescription = (GridViewMissionsList.FindEditFormTemplateControl("ASPxPanel1") as ASPxPanel).FindControl("ASPxHtmlEditor1") as ASPxHtmlEditor;
+            e.NewValues["Description"] = htmlEditorDescription.Html;
+
+            var htmlEditorSkills = (GridViewMissionsList.FindEditFormTemplateControl("ASPxPanel1") as ASPxPanel).FindControl("editorSkillsRequired") as ASPxHtmlEditor;
+            e.NewValues["SkillsRequired"] = htmlEditorSkills.Html;
+
+
             var dal = new MissionsDal();
             dal.UpdateMission(Convert.ToInt32(e.Keys["MissionId"])
                 , e.NewValues["Name"].ToString()
