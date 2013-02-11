@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxTabControl runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="dcUniverse" CssFilePath="{0}/styles.css">
+    <ContentStyle>
+        <Border BorderColor="#FF8800" BorderStyle="Solid" BorderWidth="4px" />
+    </ContentStyle>
+</dx:ASPxTabControl>
+

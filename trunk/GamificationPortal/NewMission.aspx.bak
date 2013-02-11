@@ -1,0 +1,86 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewMission.aspx.cs" Inherits="GamificationPortal.NewMission" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <table>
+        <tr>
+            <td> 
+                <dx:ASPxLabel ID="ASPxLabel1" runat="server" Text="Name">
+                </dx:ASPxLabel>
+            </td>
+             <td> 
+                 <dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="170px">
+                 </dx:ASPxTextBox>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <dx:ASPxLabel ID="ASPxLabel2" runat="server" Text="Description">
+                </dx:ASPxLabel>
+            </td>
+             <td> 
+                 <dx:ASPxTextBox ID="ASPxTextBox2" runat="server" Width="170px" Height="21px">
+                 </dx:ASPxTextBox>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <dx:ASPxLabel ID="ASPxLabel4" runat="server" Text="Type">
+                </dx:ASPxLabel>
+            </td>
+             <td> 
+                 <dx:ASPxComboBox ID="ASPxComboBox2" runat="server" SelectedIndex="0">
+                     <Items>
+                         <dx:ListEditItem Selected="True" Text="Presentation" />
+                         <dx:ListEditItem Selected="True" Text="Development" />
+                         <dx:ListEditItem Selected="True" Text="Other" />
+                     </Items>
+                 </dx:ASPxComboBox>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <dx:ASPxLabel ID="ASPxLabel3" runat="server" Text="Complexity">
+                </dx:ASPxLabel>
+            </td>
+             <td> 
+                 <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" SelectedIndex="0">
+                     <Items>
+                         <dx:ListEditItem Selected="True" Text="Low" />
+                         <dx:ListEditItem Selected="True" Text="Medium" />
+                         <dx:ListEditItem Selected="True" Text="High" />
+                     </Items>
+                 </dx:ASPxComboBox>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <dx:ASPxLabel ID="ASPxLabel5" runat="server" Text="Start Date">
+                </dx:ASPxLabel>
+            </td>
+             <td> 
+                 <dx:ASPxDateEdit ID="ASPxDateEdit1" runat="server" Date="12/25/2012 18:41:10">
+                 </dx:ASPxDateEdit>
+            </td>
+        </tr>
+         <tr>
+            <td> 
+                <dx:ASPxLabel ID="ASPxLabel6" runat="server" Text="End Date">
+                </dx:ASPxLabel>
+            </td>
+             <td> 
+                <dx:ASPxDateEdit ID="ASPxDateEdit2" runat="server" Date="12/25/2012 18:41:10">
+                 </dx:ASPxDateEdit></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><dx:ASPxButton ID="ASPxButton1" runat="server" Text="Submit" Height="16px" Width="153px">
+    </dx:ASPxButton></td>
+        </tr>
+    </table>
+
+    
+</asp:Content>

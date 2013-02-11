@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GamificationPortal.SiteMaster" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxTabControl" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxClasses" tagprefix="dx" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <asp:PlaceHolder runat="server">     
+          <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>  
+    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <div id="fb-root"></div>
+   
+<script>
+    // Load the SDK Asynchronously
+    (function (d) {
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+
+
+    function login() {
+        FB.login(function (response) {
+            if (response.authResponse) {
+                // connected
+            } else {
+                // cancelled
+            }
+        });
+    }
+    
+    // Additional JS functions here
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '304348189683919', // App ID
+          //  channelUrl: '//http://science.softserveinc.com/DelphiDCGamificationPortal/channel.html', // Channel File
+            status: true, // check login status
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true,  // parse XFBML
+            useCachedDialogs: true,
+            oauth: true
+        });
+
+        // Additional init code here
+        FB.getLoginStatus(handleStatusChange);
+    };
+
+   // authUser();
+   // checkForCredits();
+   // updateAuthElements();
+    
+   
+    
+    var user = [];
+
+    var permissions = ['user_status', 'publish_checkins', 'user_likes'];
+    //Detect when Facebook tells us that the user's session has been returned
+    function authUser() {
+        FB.Event.subscribe('auth.statusChange', handleStatusChange);
+    }
+    // Handle status changes
+    function handleStatusChange(session) {
+      //  alert('Got the user\'s session: ');
+
+        if (session.authResponse) {
+            document.body.className = 'connected';
+
+            //Fetch user's id, name, and picture
+            FB.api('/me', {
+                fields: 'name, picture'
+            },
+            function (response) {
+                if (!response.error) {
+                    user = response;
+
+                    console.log('Got the user\'s name and picture: ', response);
+
+                    //Update display of user name and picture
+                    if (document.getElementById('user-name')) {
+                        document.getElementById('user-name').innerHTML = user.name;
+                    }
+                    if (document.getElementById('user-picture')) {
+                        document.getElementById('user-picture').src = user.picture.data.url;
+                    }
+                }
+
+                clearAction();
+            });
+        }
+        else {
+            document.body.className = 'not_connected';
+
+            clearAction();
+        }
+    }
+</script>
+    <script src="//connect.facebook.net/en_US/all.js"></script>
+
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <%--Framework Scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site Scripts--%>
+
+        </Scripts>
+    </asp:ScriptManager>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a runat="server" href="~/">DC Gamification logo here</a>
+                </p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+                                Hello, <asp:LoginName runat="server" CssClass="username" FormatString="{0}" />!
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                            </p>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                <nav>
+                
+                    <ul id="menu">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Missions.aspx">Missions</a></li>
+                        <li><a id="A1" runat="server" href="~/Administration.aspx">Administration</a></li>
+                        <li><a runat="server" href="~/About.aspx">About</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; <%: DateTime.Now.Year %> - SoftServe/Delphi DC Gamification</p>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
