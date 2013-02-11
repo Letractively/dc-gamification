@@ -38,7 +38,7 @@
          var diffHrs = Math.round((diffSec % 86400) / 3600); // hours
          var diffMins = Math.round(((diffSec % 86400) % 3600) / 60); // minutes
          var diffSecs =  (Math.round(((diffSec % 86400) % 3600)  % 60)); // secs
-        document.getElementById('jorneyLeftLable').innerHTML = 'Jorney begins in ' + diffDays + ' days ' + diffHrs + ' hours ' + diffMins + ' minutes ' + diffSecs;     
+        document.getElementById('jorneyLeftLable').innerHTML = 'Journey begins in ' + diffDays + ' days ' + diffHrs + ' hours ' + diffMins + ' minutes ';     
     
 }" />
     </dx:ASPxTimer>
