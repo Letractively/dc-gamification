@@ -5,7 +5,7 @@
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPanel" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxUploadControl" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<h2 runat="server" id="lblUserFullName" style="color: #ffffff">User Full Name</h2>
+<h2 class="withShadow" runat="server" id="lblUserFullName" style="color: #ffffff">User Full Name</h2>
 
 <div class="mainContainerPanel">
     <div class="mainContainerBody">

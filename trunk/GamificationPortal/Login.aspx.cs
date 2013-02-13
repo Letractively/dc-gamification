@@ -38,11 +38,11 @@ namespace GamificationPortal.Account
 
                         if (!dal.IsUserExists(AuthProvider.LoginWithDomain(login.UserName)))
                         {
-                            //Session["CurrentUserId"] = dal.RegisterNewUser(loginWithDomain,
-                            //                             AuthProvider.GetUserFullNameByDomainIdentity(login.UserName));
-                            //Login1.DestinationPageUrl = "Profile.aspx";
-                            e.Authenticated = false;
-                            return;
+                            Session["CurrentUserId"] = dal.RegisterNewUser(loginWithDomain,
+                                                         AuthProvider.GetUserFullNameByDomainIdentity(login.UserName));
+                            Login1.DestinationPageUrl = "Profile.aspx";
+                            //e.Authenticated = false;
+                            //return;
                         }
                         else
                         {

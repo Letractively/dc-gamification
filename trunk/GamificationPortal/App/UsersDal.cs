@@ -34,15 +34,21 @@ namespace GamificationPortal.App
 
         public Guid GetUserGUIDByLogin(string loginWithDomain)
         {
+            var guid = string.Empty;
             var id = Database.ExecuteScalar(CommandType.Text,
                                             String.Format("SELECT UserId FROM dbo.Users WHERE UserName = '{0}'",
-                                                          loginWithDomain)).ToString();
+                                                          loginWithDomain));
+            if (id != null)
+            {
+                guid = id.ToString();
+            }
+            
             Guid userGUID;
-            if (Guid.TryParse(id, out userGUID))
+            if (Guid.TryParse(guid, out userGUID))
             {
                 return userGUID;
             }
-            throw new Exception("Failed to get user Identifier.");
+            return Guid.Empty;
         }
 
 
