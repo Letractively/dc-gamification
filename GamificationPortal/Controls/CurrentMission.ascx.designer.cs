@@ -40,13 +40,13 @@ namespace GamificationPortal.Controls {
         protected global::DevExpress.Web.ASPxEditors.ASPxProgressBar ProgressBarCurrentMission;
         
         /// <summary>
-        /// lblCurrentMissionDescr control.
+        /// lblCurrentMissionDescr1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblCurrentMissionDescr;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCurrentMissionDescr1;
         
         /// <summary>
         /// lblSkillsRequired control.
@@ -55,7 +55,7 @@ namespace GamificationPortal.Controls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblSkillsRequired;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblSkillsRequired;
         
         /// <summary>
         /// lblReward control.

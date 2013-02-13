@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CurrentMission.ascx.cs" Inherits="GamificationPortal.Controls.CurrentMission" %>
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxRatingControl" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<h2 style="color: #ffffff">Current Mission</h2>
+
+<h2 class="withShadow" style="color: #ffffff">Current Mission</h2>
 
  <div class="mainContainerPanel">
         <div class="mainContainerBody" style="min-height: 350px;">
@@ -25,10 +26,10 @@
         <td/>
     </tr>
     <tr>
-        <td>Description
+         <td style="vertical-align: top;">Description
         </td>
         <td colspan="2">
-            <dx:ASPxLabel ID="lblCurrentMissionDescr" runat="server" Text="ASPxLabel"></dx:ASPxLabel>
+          <div runat="server" id="lblCurrentMissionDescr1"></div>
         </td>
        
     </tr>
@@ -36,10 +37,10 @@
         <td/>
     </tr>
     <tr>
-        <td>Skills Required
+        <td style="vertical-align: top;">Skills Required
         </td>
         <td>
-            <dx:ASPxLabel ID="lblSkillsRequired" runat="server" Text="ASPxLabel"></dx:ASPxLabel>
+             <div runat="server" id="lblSkillsRequired"></div>
         </td>
     </tr>
     <tr>

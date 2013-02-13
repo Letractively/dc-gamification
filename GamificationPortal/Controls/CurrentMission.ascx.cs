@@ -24,9 +24,9 @@ namespace GamificationPortal.Controls
             if (curMission != null)
             {
                 lblCurrentMissionName.Text = curMission.Name;
-                lblCurrentMissionDescr.Text = curMission.Description;
+                lblCurrentMissionDescr1.InnerHtml = curMission.Description;
                 lblReward.Text = curMission.Reward.ToString(CultureInfo.InvariantCulture);
-                lblSkillsRequired.Text = curMission.SkillsRequired;
+                lblSkillsRequired.InnerHtml = curMission.SkillsRequired;
                 rcMissionRatingValue.Value = curMission.Complexity;
                 lblOwner.Text = curMission.Owner;
                 ProgressBarCurrentMission.Minimum = 0;
