@@ -10,8 +10,7 @@ namespace GamificationPortal.App
     {
         internal int RegisterNewBadgesFileGroup(string name, string message, string description, string badgeType, int ruleId)
         {
-            return Convert.ToInt32(Database.ExecuteScalar(CommandType.Text, string.Format(
-                                          "INSERT INTO dbo.BadgesCollection(Name, Message, Description, ImageType, GrantRuleId) VALUES ('{0}', '{1}', '{2}', '{3}', {4}) SELECT SCOPE_IDENTITY()", name, message, description, badgeType, ruleId)));
+            return Convert.ToInt32(Database.ExecuteScalar("USP_BADGES_REGISTER_NEW_GROUP", new object[] { name, message, description, badgeType, ruleId }));
         }
 
         internal void RegisterNewBadgeInFileGroup(int fileGroup, Guid fileKey, int position)
@@ -78,7 +77,7 @@ namespace GamificationPortal.App
 from dbo.GrantRulesDictionaty gr
 LEFT JOIN dbo.BadgesCollection bg ON
 	bg.GrantRuleId = gr.GrantRuleId
-WHERE bg.FileGroupId IS NULL");
+");
         }
     }
 }

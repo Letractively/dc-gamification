@@ -17,6 +17,8 @@ namespace GamificationPortal.Controls
             get { return "~/Images/Users/" + Page.User.Identity.Name; }
         }
 
+        private string EmblemKey;
+   
         private readonly BadgesDal _dal = new BadgesDal();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -31,17 +33,26 @@ namespace GamificationPortal.Controls
             gvMisc.DataSource = _dal.GetBadgesByUserAndType(AuthProvider.UserKey(Session), BadgesType.Misc);
             gvMisc.DataBind();
 
-           
+            CombineLogo();
+            if (Session["CurrentEmplem"] != null)
+            {
+                Image1.ImageUrl = Session["CurrentEmplem"].ToString();
+            }
         }
 
         private void CombineLogo()
         {
+           
             var dal = new BadgesDal();
             if (gvUnique.FocusedRowIndex > 0)
             {
                 var key = gvUnique.GetRowValues(gvUnique.FocusedRowIndex, new string[] {"FileGroupId"}).ToString();
-                string filename = dal.GetUnlockedBadgeFileName(AuthProvider.UserKey(Session), Convert.ToInt32(key));
-                CombineBitmap(new[] { filename });
+                var isLocked = Convert.ToBoolean(gvUnique.GetRowValues(gvUnique.FocusedRowIndex, new string[] { "IsLocked" }));
+                if (!isLocked)
+                {
+                    string filename = dal.GetUnlockedBadgeFileName(AuthProvider.UserKey(Session), Convert.ToInt32(key));
+                    CombineBitmap(new[] {filename});
+                }
             }
             else
             {
@@ -74,7 +85,7 @@ namespace GamificationPortal.Controls
             }
         }
 
-        public void CombineBitmap(string[] files)
+        public void  CombineBitmap(string[] files)
         {
             //read all images into memory
             var images = new List<Bitmap>();
@@ -128,14 +139,14 @@ namespace GamificationPortal.Controls
                         Directory.CreateDirectory(dirPath);
 
                     }
-                    var filePath = dirPath + Guid.NewGuid().ToString() + "_logo.png";
+                    EmblemKey = Guid.NewGuid().ToString() + "_logo.png";
+                    var filePath = dirPath + "\\" + EmblemKey;
                     
                     DeleteAllTempFiles();
                     finalImage.Save(filePath, ImageFormat.Png);
 
-                    Image1.Width = finalImage.Width;
-                    Image1.Height = finalImage.Height;
-                    Image1.ImageUrl = "DynamicImage.aspx?path=" + filePath;
+                    Session["CurrentEmplem"] = BadgesLogoDirectory + "\\" + EmblemKey;
+                     
                 }
 
             }
@@ -155,17 +166,22 @@ namespace GamificationPortal.Controls
                 }
             }
         }
+
         public void DeleteAllTempFiles()
         {
+            var EmblemKey = (new UsersDal()).GetUserEmblem(AuthProvider.UserKey(Session));
+            var dirPath = MapPath(BadgesLogoDirectory);
+            var filePath = dirPath + "\\" + EmblemKey;
 
             foreach (var f in System.IO.Directory.GetFiles(MapPath(BadgesLogoDirectory)))
-                try
-                {
+            try
+            {
+                if (f != filePath)
                     System.IO.File.Delete(f);
-                }
-                catch (Exception)
-                {
-                }
+            }
+            catch (Exception)
+            {
+            }
 
 
         }
@@ -174,9 +190,12 @@ namespace GamificationPortal.Controls
         {
             if (gvBackgrounds.FocusedRowIndex > 0)
             {
+                gvBackgrounds.Selection.SelectRow(gvBackgrounds.FocusedRowIndex);
+
                 gvUnique.FocusedRowIndex = 0;
+                gvUnique.Selection.UnselectAll();
             }
-            CombineLogo();
+           
         }
 
         protected void gvMisc_FocusedRowChanged(object sender, EventArgs e)
@@ -185,7 +204,7 @@ namespace GamificationPortal.Controls
             {
                 gvUnique.FocusedRowIndex = 0;
             }
-            CombineLogo();
+           
         }
 
         protected void gvTitles_FocusedRowChanged(object sender, EventArgs e)
@@ -194,18 +213,29 @@ namespace GamificationPortal.Controls
             {
                 gvUnique.FocusedRowIndex = 0;
             }
-            CombineLogo();
+           
         }
 
         protected void gvUnique_FocusedRowChanged(object sender, EventArgs e)
         {
+            gvUnique.Selection.UnselectAll();
             if (gvUnique.FocusedRowIndex > 0)
             {
+                gvUnique.Selection.SelectRow(gvBackgrounds.FocusedRowIndex);
+
                 gvBackgrounds.FocusedRowIndex = 0;
+                gvBackgrounds.Selection.UnselectAll();
                 gvTitles.FocusedRowIndex = 0;
+                gvTitles.Selection.UnselectAll();
                 gvMisc.FocusedRowIndex = 0;
+                gvMisc.Selection.UnselectAll();
             }
-            CombineLogo();
+           
+        }
+
+        protected void ASPxButton1_Click(object sender, EventArgs e)
+        {
+            (new UsersDal()).RegisterNewUserEmblem(AuthProvider.UserKey(Session), EmblemKey);
         }
     }
 }

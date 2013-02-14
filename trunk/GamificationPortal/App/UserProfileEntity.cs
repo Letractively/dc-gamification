@@ -1,4 +1,6 @@
-﻿namespace GamificationPortal.App
+﻿using GamificationPortal.Account;
+
+namespace GamificationPortal.App
 {
     public class UserProfileEntity
     {
@@ -29,5 +31,7 @@
         public int CompletedMissions;
         public int FailedMissions;
         public string Specialization;
+
+        public string UserEmblemUrl { get; set; }
     }
 }

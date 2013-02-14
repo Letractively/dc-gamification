@@ -83,8 +83,8 @@ namespace GamificationPortal.App
                       RankDescription = dataset.Tables[0].Rows[0].ItemArray[7].ToString(),
                         CompletedMissions = Convert.ToInt32(dataset.Tables[0].Rows[0].ItemArray[8]),
                         FailedMissions = Convert.ToInt32(dataset.Tables[0].Rows[0].ItemArray[9]),
-                        Specialization = dataset.Tables[0].Rows[0].ItemArray[10].ToString()
-                       
+                        Specialization = dataset.Tables[0].Rows[0].ItemArray[10].ToString(),
+                        UserEmblemUrl = dataset.Tables[0].Rows[0].ItemArray[11].ToString()
                     };
             }
             return result;
@@ -148,6 +148,22 @@ namespace GamificationPortal.App
         internal DataSet GetRewardsNotificationList(Guid guid)
         {
             return Database.ExecuteDataSet("USP_REWARDS_GET_NOTIFICATIONS", new object[] { guid });
+        }
+
+        public void RegisterNewUserEmblem(Guid userKey, string emblemKey)
+        {
+            Database.ExecuteNonQuery(CommandType.Text,
+                                    string.Format(@"UPDATE dbo.Users SET EmblemImageKey = '{0}' WHERE UserId = '{1}'", emblemKey, userKey.ToString()));
+        }
+
+        public string GetUserEmblem(Guid userKey)
+        {
+            var result = Database.ExecuteScalar(CommandType.Text,
+                                                string.Format(
+                                                    @"SELECT EmblemImageKey FROM dbo.Users WHERE UserId = '{0}'",
+                                                    userKey));
+           
+            return result != null ? result.ToString() : string.Empty;
         }
     }
 }

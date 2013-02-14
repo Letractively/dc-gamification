@@ -13,13 +13,22 @@ namespace GamificationPortal {
     public partial class LeaderBoard {
         
         /// <summary>
-        /// GridViewMLeaderBoard control.
+        /// ASPxPageControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView.ASPxGridView GridViewMLeaderBoard;
+        protected global::DevExpress.Web.ASPxTabControl.ASPxPageControl ASPxPageControl1;
+        
+        /// <summary>
+        /// ContentControl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxClasses.ContentControl ContentControl1;
         
         /// <summary>
         /// LeaderPreviewDev control.
@@ -47,5 +56,23 @@ namespace GamificationPortal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::GamificationPortal.LeaderBoardControls.LeaderPreview LeaderPreviewTW;
+        
+        /// <summary>
+        /// ContentControl2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxClasses.ContentControl ContentControl2;
+        
+        /// <summary>
+        /// GridViewMLeaderBoard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView.ASPxGridView GridViewMLeaderBoard;
     }
 }
