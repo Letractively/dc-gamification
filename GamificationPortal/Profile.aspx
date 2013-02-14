@@ -52,8 +52,6 @@
                 </ContentCollection>
             </dx:TabPage>
             <dx:TabPage Name="AchievementsTab" Text="Achievements">
-                <TabImage Url="~/Images/SiteMap/soon.gif">
-                </TabImage>
                 <ContentCollection>
                     <dx:ContentControl runat="server" SupportsDisabledAttribute="True">
                         <uc3:UserAchevements ID="UserAchevements1" runat="server" />

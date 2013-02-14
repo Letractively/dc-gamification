@@ -24,6 +24,11 @@ namespace GamificationPortal.Controls
             {
                 lblUserFullName.InnerText = profile.FullName;
                 imgUserAvatar.ImageUrl = profile.UserAvatarUrl;
+                if (!string.IsNullOrEmpty(profile.UserEmblemUrl))
+                {
+                    imgUserEmblem.ImageUrl = string.Format("~/Images/Users/{0}/{1}", Page.User.Identity.Name,  profile.UserEmblemUrl);    
+                }
+                
                 imgAvatarPreview.ImageUrl = profile.UserAvatarUrl;
                 lblSpecialization.InnerText = profile.Specialization;
                 lblRankDescription.Text = profile.RankDescription;

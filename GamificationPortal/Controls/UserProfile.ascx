@@ -9,8 +9,12 @@
 
 <div class="mainContainerPanel">
     <div class="mainContainerBody">
-
-        <dx:ASPxImage ID="imgUserAvatar" runat="server" ImageUrl="~/Images/layout/untitled.png"></dx:ASPxImage>
+        <div>
+            <dx:ASPxImage ID="imgUserAvatar" runat="server" ImageUrl="~/Images/layout/untitled.png"></dx:ASPxImage>
+        </div>
+        <div>
+            <dx:ASPxImage ID="imgUserEmblem" runat="server" ImageUrl="~/Images/layout/untitled.png" Style="position: absolute; top: 85px; left: 145px;" Width="75px" Height="75px"></dx:ASPxImage>
+        </div>
         <h4 runat="server" id="lblSpecialization" style="color: #000000">Level Specialization</h4>
         <%--<h4 runat="server" id="lblRankDescription" style="color: #000000">Level Caption</h4>--%>
         <div>
