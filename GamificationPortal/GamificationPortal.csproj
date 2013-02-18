@@ -141,6 +141,7 @@
     <Content Include="About.aspx" />
     <Content Include="Content\Login.css" />
     <Content Include="Controls\RewardsNotification.ascx" />
+    <Content Include="Images\EmptyImage.png" />
     <Content Include="Images\layout\theme\LogoBig.png" />
     <Content Include="Login.aspx" />
     <Content Include="Account\Manage.aspx" />

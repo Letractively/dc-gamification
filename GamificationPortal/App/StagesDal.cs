@@ -64,5 +64,17 @@ FROM  dbo.Stages");
                                            "SELECT StageId, Description FROM dbo.Stages WHERE END_Date > GETDATE() ORDER BY Start_Date");
 
         }
+
+        internal decimal GetCurrentStageProgress()
+        {
+            var result = Database.ExecuteScalar("USP_GET_CURRENT_STAGE_PROGRESS");
+            if (result != null)
+                return
+                    Convert.ToDecimal(result);
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

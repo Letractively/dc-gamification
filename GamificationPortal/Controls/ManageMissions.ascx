@@ -33,6 +33,7 @@
         <br />
         <div>
             <dx:ASPxGridView ID="GridViewMissionsList" runat="server" AutoGenerateColumns="False" Width="100%" KeyFieldName="MissionId"
+           
                 EnableCallbackAnimation="True"
                 EnablePagingCallbackAnimation="True"
                 OnCellEditorInitialize="GridViewMissionsList_CellEditorInitialize"
@@ -141,8 +142,10 @@
                     </dx:GridViewDataComboBoxColumn>
                 </Columns>
                 <SettingsBehavior AllowFocusedRow="True" ConfirmDelete="True" />
+                <SettingsPager PageSize="20" Position="TopAndBottom">
+                </SettingsPager>
                 <SettingsEditing Mode="PopupEditForm" />
-                <Settings ColumnMinWidth="75" HorizontalScrollBarMode="Auto" VerticalScrollBarMode="Auto" />
+                <Settings ColumnMinWidth="75" HorizontalScrollBarMode="Auto" />
                 <SettingsDetail ShowDetailRow="True" />
                 <SettingsPopup>
                     <EditForm HorizontalAlign="WindowCenter" Modal="True" VerticalAlign="WindowCenter" ShowHeader="False" />

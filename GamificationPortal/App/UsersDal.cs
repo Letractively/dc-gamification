@@ -165,5 +165,15 @@ namespace GamificationPortal.App
            
             return result != null ? result.ToString() : string.Empty;
         }
+
+        public string GetUserAvatar(Guid userKey)
+        {
+            var result = Database.ExecuteScalar(CommandType.Text,
+                                                string.Format(
+                                                    @"SELECT Image_key FROM dbo.Users WHERE UserId = '{0}'",
+                                                    userKey));
+
+            return result != null ? result.ToString() : string.Empty;
+        }
     }
 }

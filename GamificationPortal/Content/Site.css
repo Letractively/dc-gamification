@@ -127,6 +127,13 @@ h3 {
 	color: #000000;
 }
 
+h4 {
+	font-family: Arial Narrow;
+	font-size: 1.5em; 
+	line-height: .7em; 
+	/*text-shadow: 1px 1px 4px rgba(0,0,0,0.8);*/ 
+	
+}
 h1.withShadow, h2.withShadow, h3.withShadow, h4.withShadow{
 	
 	text-shadow: 1px 1px 4px rgba(0,0,0,0.8); 
@@ -297,9 +304,9 @@ a:hover
 
 #login-widget
 {
-	top: 0;
-	height: 35px;
-	width: 175px;
+	top: 1px;
+	height: 27px;
+	width: 100px;
 	text-align: center;
 	vertical-align: bottom;
 	color: #ccc;
@@ -344,6 +351,17 @@ a:hover
 	text-decoration: none;
 	font-family: Arial Narrow;
 	
+}
+
+.UserFullNameSection {
+	color: #ccc;
+	font-family: Arial Narrow;
+	font-size: 14px;
+	position: absolute;
+	width:100%;
+	text-align: center;
+	top: 5px;
+	left: 300px;
 }
 
 #login

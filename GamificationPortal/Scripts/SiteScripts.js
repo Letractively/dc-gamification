@@ -141,17 +141,3 @@ if (BrowserDetect.browser == "Explorer" && BrowserDetect.version == 7) {
 
 }
  
-function ShowRewardNotification(rewardName, rewardMessage, rewardImgUrl) {
-    
-    var messageContainer = document.getElementById('rewardMessage');
-    if (messageContainer != null) {
-        messageContainer.innerHTML = rewardMessage;
-    }
-    
-    var imageContainer = document.getElementById('rewardImage');
-    if (imageContainer != null) {
-        imageContainer.src = '../Images/Badges/' + rewardImgUrl+ '.png';
-    }
-    
-    NotificationPopupScreen.Show();
-}

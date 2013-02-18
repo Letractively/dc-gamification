@@ -101,8 +101,12 @@
                             </LinkStyle>
                         </dx:ASPxMenu>
                     </td>
+                   
                     <td style="text-align: right; width: 100px;">
+                        
+                        
                         <div id="login-widget">
+                            
                             <section id="login">
                                 <asp:LoginView runat="server" ViewStateMode="Disabled" ID="LoginViewControl">
                                     <AnonymousTemplate>
@@ -111,17 +115,9 @@
                                         </p>
                                     </AnonymousTemplate>
                                     <LoggedInTemplate>
-                                        <table style="width: 100%;">
-                                            <tr>
-                                            <td style="text-align: center; height: 13px;">Hello, <dx:ASPxLabel ID="UserFullName"  ClientIDMode="Static" runat="server" Text="ASPxLabel"></dx:ASPxLabel>!</td>
-                                                </tr>
-                                            <tr>
-                                            <td><asp:LoginStatus runat="server" ID="LoginStatusControl" LogoutAction="Redirect" LogoutText="Log out" LogoutPageUrl="~/" OnLoggingOut="LoginStatusControl_LoggingOut" /></td>
-                                                </tr>
-                                        </table>
-                                            
-                                            
-                                       
+                                        <p>
+                                       <asp:LoginStatus runat="server" ID="LoginStatusControl" LogoutAction="Redirect" LogoutText="Log out" LogoutPageUrl="~/" OnLoggingOut="LoginStatusControl_LoggingOut" />
+                                            </p>
                                     </LoggedInTemplate>
                                 </asp:LoginView>
                             </section>
@@ -131,6 +127,9 @@
                 </tr>
 
             </table>
+             <div runat="server" id="UserFullNameSection" class="UserFullNameSection" >
+                        Hello, <dx:ASPxLabel ID="UserFullName" ClientIDMode="Static" runat="server" Text="ASPxLabel"></dx:ASPxLabel>!    
+                        </div>
         </div>
         <div id="content">
 
@@ -142,9 +141,9 @@
                                 <div id="mainContainerHeader">
                                     <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
                                 </div>
-                                
-                                        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-                                 
+
+                                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+
                             </div>
                         </td>
                     </tr>
@@ -189,7 +188,7 @@
                                                 </td>
                                                 <td>
                                                     <dx:ASPxButton ID="ASPxButton3" runat="server" Text="Help" AutoPostBack="False" Width="100px"></dx:ASPxButton>
-                                                    
+
                                                 </td>
                                             </tr>
                                         </table>
@@ -202,9 +201,9 @@
                         </dx:PopupControlContentControl>
                     </ContentCollection>
                 </dx:ASPxPopupControl>
-                
-                
-                <dx:ASPxPopupControl ID="NotificationPopupScreen" ClientIDMode="Static" runat="server" Height="176px" Width="397px" EnableCallbackAnimation="True" HeaderText="Congratulations!!!" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ShowPageScrollbarWhenModal="True" CloseAction="CloseButton" ShowCloseButton="False" >
+
+
+                <dx:ASPxPopupControl ID="NotificationPopupScreen" ClientIDMode="Static" runat="server" Height="176px" Width="397px" EnableCallbackAnimation="True" HeaderText="Congratulations!!!" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ShowPageScrollbarWhenModal="True" CloseAction="CloseButton" ShowCloseButton="False">
                     <ContentCollection>
                         <dx:PopupControlContentControl ID="PopupControlContentControl2" runat="server" SupportsDisabledAttribute="True">
                             <dx:ASPxRoundPanel ID="ASPxRoundPanel2" runat="server" DefaultButton="ASPxButton2" ShowHeader="False" Width="100%">
@@ -213,8 +212,8 @@
                                     <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                                         <table style="width: 100%;">
                                             <tr>
-                                                <td >
-                                                   <uc1:RewardsNotification runat="server" id="RewardsNotification" /> 
+                                                <td>
+                                                    <uc1:RewardsNotification runat="server" ID="RewardsNotification" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -241,7 +240,7 @@
 
         <div id="footer">
             <table align="center" style="width: 960px;">
-                 <tr>
+                <tr>
                     <td style="text-align: left;">
                         <ul>
                             <li class="first"><a href="About.aspx">About</a></li>
@@ -257,7 +256,7 @@
                         </div>
                     </td>
                 </tr>
-               
+
 
             </table>
 

@@ -6,7 +6,7 @@
 <%@ Register Src="~/LeaderBoardControls/LeaderPreview.ascx" TagPrefix="uc1" TagName="LeaderPreview" %>
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxClasses" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPanel" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
 
 
 
@@ -27,7 +27,18 @@
                 </TabStyle>
                 <ContentCollection>
                     <dx:ContentControl ID="ContentControl1" runat="server" SupportsDisabledAttribute="True">
-                        <h2 class="withShadow" style="color: #ffffff"> Top performers in current stage</h2>
+                        <table style="width: 100%;">
+                        <tr>
+                            <td><h3 class="withShadow" style="color: #ffffff">Top performers in current stage</h3></td>
+                            <td style="width: 150px;"><h3 class="withShadow" style="color: #ffffff">Stage progress: </h3></td>
+                            <td style="width: 150px;">
+                                <dx:ASPxProgressBar ID="pbStageProgress" runat="server" Height="18px" Position="50" Width="150px" CustomDisplayFormat="{0}"
+                DisplayFormatString="{0}" Theme="" ShowPosition="True" align="center">
+            </dx:ASPxProgressBar>
+                            </td>
+                        </tr>
+                        </table>
+                        
                         <table style="width: 100%">
 
                             <tr>
@@ -75,7 +86,7 @@
                                                     </dx:GridViewDataTextColumn>
                                                     <dx:GridViewDataComboBoxColumn Caption="Specialization" FieldName="SpecializationDescription" Name="SpecializationDescription" UnboundType="String" VisibleIndex="4" Width="150px">
                                                     </dx:GridViewDataComboBoxColumn>
-                                                    <dx:GridViewDataComboBoxColumn Caption="Rank" FieldName="RankDescr" Name="Rank" VisibleIndex="5" Width="100px">
+                                                    <dx:GridViewDataComboBoxColumn Caption="Rank" FieldName="RankDescr" Name="Rank" VisibleIndex="5" Width="150px">
                                                     </dx:GridViewDataComboBoxColumn>
                                                     <dx:GridViewDataComboBoxColumn Caption="Experience" FieldName="Experience" Name="Experience" VisibleIndex="6" Width="75px">
                                                     </dx:GridViewDataComboBoxColumn>
@@ -85,70 +96,53 @@
                                                 <SettingsDetail ShowDetailRow="True" />
                                                 <Templates>
                                                     <DetailRow>
+                                                       
+                                                      
                                                         <table style="width: 100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <dx:ASPxImage ID="ASPxImage1" runat="server" ImageUrl="~/Images/Users/default.jpeg" Width="75px"></dx:ASPxImage>
+                                                                    <dx:ASPxImage ID="ASPxImage1" runat="server" ImageUrl='<%#Bind("Image_key") %>' ></dx:ASPxImage>
 
                                                                 </td>
                                                                 <td>
-
-                                                                    <table>
-                                                                        <tr>
-                                                                            <td style="width: 100%;">
-                                                                                <%-- <dx:ASPxProgressBar ID="ASPxProgressBar1" runat="server" Height="10px" Position="50" Width="200px">
-                                                                        </dx:ASPxProgressBar>--%>
-                                                                        Status Bars
-                                                                                <br />
-                                                                                "% if work done in stage "<br />
-                                                                                "Level progress"<br />
-                                                                                <img src="Images/SiteMap/soon.gif" /></td>
-
-
-
-                                                                            <%-- <dx:ASPxProgressBar ID="ASPxProgressBar2" runat="server" CustomDisplayFormat="{0}/{2}" DisplayMode="Custom" Height="10px" Position="50" Width="200px">
-                                                                        </dx:ASPxProgressBar>--%>
-                                                                        </tr>
-                                                                    </table>
+                                                                    <dx:ASPxImage ID="ASPxImage2" runat="server" ImageUrl='<%#FormatUrl(Eval("EmblemImageKey"), Eval("UserName")) %>' Width="128px" Height="128px"></dx:ASPxImage>
 
                                                                 </td>
                                                                 <td style="vertical-align: top;">
-                                                                    <table style="vertical-align: top; border: #48d1cc solid 1px; width: 400px;">
+                                                                    <h4>Missions</h4>
+                                                                    <table>
                                                                         <tr>
-                                                                            <td colspan="3" style="text-align: center; border-bottom: #48d1cc solid 1px;">
-                                                                                <h4>Missions</h4>
-                                                                            </td>
-                                                                            <td colspan="2" style="text-align: center; border-bottom: #48d1cc solid 1px;">
-                                                                                <h4>Badges</h4>
-                                                                            </td>
-                                                                            <td></td>
+                                                                            <td  style="width: 75px;">Created:</td>
+                                                                            <td><%# Eval("CreatedMissions")%></td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="text-align: center;">Created
-                                                                            </td>
-                                                                            <td style="text-align: center;">Completed
-                                                                            </td>
-                                                                            <td style="text-align: center; border-right: #48d1cc solid 1px;">Failed
-                                                                            </td>
-                                                                            <td style="text-align: center;">Standart
-                                                                            </td>
-                                                                            <td style="text-align: center;">Unique
-                                                                            </td>
-                                                                            <td style="width: 90px; text-align: center;">Days on board
-                                                                            </td>
+                                                                            <td>Completed:</td>
+                                                                            <td><%# Eval("CompletedMissions")%></td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="text-align: center;"><%# Eval("CreatedMissions")%></td>
-                                                                            <td style="text-align: center;"><%# Eval("CompletedMissions")%></td>
-                                                                            <td style="text-align: center;"><%# Eval("FailedMissions")%></td>
-                                                                            <td style="text-align: center;"><%# Eval("UnlockedBadges") %></td>
-                                                                            <td style="text-align: center;"><%# Eval("UnlockedUniqueBadges") %></td>
-                                                                            <td style="text-align: center;"><%# Eval("DaysOnBoard") %></td>
+                                                                            <td>Failed:</td>
+                                                                            <td><%# Eval("FailedMissions")%></td>
                                                                         </tr>
                                                                     </table>
                                                                 </td>
+                                                                 <td style="vertical-align: top;">
+                                                                    <h4>Emblems and Badges</h4>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td style="width: 110px;">Unlocked emblems:</td>
+                                                                            <td><%# Eval("UnlockedBadges")%>/<%# Eval("EmblemsTotal")%></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Unlocked badges:</td>
+                                                                            <td><%# Eval("UnlockedUniqueBadges")%>/<%# Eval("UniqueBadgesTotal")%></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                    
+                                                                
                                                             </tr>
                                                         </table>
+                                                         <p>Days on board: <%# Eval("DaysOnBoard") %></p> 
                                                         <hr />
                                                     </DetailRow>
                                                 </Templates>

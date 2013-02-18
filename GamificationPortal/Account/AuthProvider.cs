@@ -156,5 +156,18 @@ namespace GamificationPortal.Account
 
 
         }
+
+        internal static string GetNameWithoutDomain(string login)
+        {
+            // Parse the string to check if domain name is present.
+            int idx = login.IndexOf('\\');
+            if (idx == -1)
+            {
+                idx = login.IndexOf('@');
+            }
+
+            string strName = idx != -1 ? login.Substring(idx + 1) : login;
+            return strName;
+        }
     }
 }

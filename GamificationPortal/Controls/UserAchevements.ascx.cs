@@ -14,10 +14,10 @@ namespace GamificationPortal.Controls
         private const string BadgesDirectory = "~/Images/Badges/";
         private string BadgesLogoDirectory
         {
-            get { return "~/Images/Users/" + Page.User.Identity.Name; }
+            get { return "~/Images/Users/" + AuthProvider.GetNameWithoutDomain(Page.User.Identity.Name); }
         }
 
-        private string EmblemKey;
+       
    
         private readonly BadgesDal _dal = new BadgesDal();
 
@@ -34,9 +34,9 @@ namespace GamificationPortal.Controls
             gvMisc.DataBind();
 
             CombineLogo();
-            if (Session["CurrentEmplem"] != null)
+            if (Session["CurrentEmblemPath"] != null)
             {
-                Image1.ImageUrl = Session["CurrentEmplem"].ToString();
+                Image1.ImageUrl = Session["CurrentEmblemPath"].ToString();
             }
         }
 
@@ -139,14 +139,15 @@ namespace GamificationPortal.Controls
                         Directory.CreateDirectory(dirPath);
 
                     }
-                    EmblemKey = Guid.NewGuid().ToString() + "_logo.png";
-                    var filePath = dirPath + "\\" + EmblemKey;
+                    var emblemKey = Guid.NewGuid().ToString() + "_logo.png";
+                    var filePath = dirPath + "\\" + emblemKey;
                     
                     DeleteAllTempFiles();
                     finalImage.Save(filePath, ImageFormat.Png);
 
-                    Session["CurrentEmplem"] = BadgesLogoDirectory + "\\" + EmblemKey;
-                     
+                    Session["CurrentEmblemPath"] = BadgesLogoDirectory + "\\" + emblemKey;
+                    Session["CurrentEmblemKey"] = emblemKey;
+
                 }
 
             }
@@ -169,21 +170,25 @@ namespace GamificationPortal.Controls
 
         public void DeleteAllTempFiles()
         {
-            var EmblemKey = (new UsersDal()).GetUserEmblem(AuthProvider.UserKey(Session));
+            var usersDal = new UsersDal();
+            var emblemKey = usersDal.GetUserEmblem(AuthProvider.UserKey(Session));
+            var avatarKey = usersDal.GetUserAvatar(AuthProvider.UserKey(Session));
+
             var dirPath = MapPath(BadgesLogoDirectory);
-            var filePath = dirPath + "\\" + EmblemKey;
+            var filePath1 = dirPath + "\\" + (avatarKey ?? string.Empty);
+            var filePath2 = dirPath + "\\" + (emblemKey ?? string.Empty);
 
-            foreach (var f in System.IO.Directory.GetFiles(MapPath(BadgesLogoDirectory)))
-            try
+            foreach (var f in Directory.GetFiles(dirPath))
             {
-                if (f != filePath)
-                    System.IO.File.Delete(f);
+                try
+                {
+                    if ((f != filePath1) && (f != filePath2))
+                        File.Delete(f);
+                }
+                catch (Exception)
+                {
+                }
             }
-            catch (Exception)
-            {
-            }
-
-
         }
 
         protected void gvBackgrounds_FocusedRowChanged(object sender, EventArgs e)
@@ -235,7 +240,11 @@ namespace GamificationPortal.Controls
 
         protected void ASPxButton1_Click(object sender, EventArgs e)
         {
-            (new UsersDal()).RegisterNewUserEmblem(AuthProvider.UserKey(Session), EmblemKey);
+            if (Session["CurrentEmblemKey"] != null)
+            {
+                (new UsersDal()).RegisterNewUserEmblem(AuthProvider.UserKey(Session), Session["CurrentEmblemKey"].ToString());
+            }
+           
         }
     }
 }

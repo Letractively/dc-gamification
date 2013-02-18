@@ -32,7 +32,7 @@ namespace GamificationPortal.Controls
                 ProgressBarCurrentMission.Minimum = 0;
                 var totalDays = curMission.EndDate.Subtract(curMission.StartDate).Days;
                 ProgressBarCurrentMission.Maximum = totalDays;
-               // ProgressBarCurrentMission.Position = curMission.EndDate.Subtract(DateTime.Now).Days + 1;
+           
                 lblEndDate.Text = curMission.EndDate.ToShortDateString();
                 tbMissionId.Value = curMission.MissionId.ToString(CultureInfo.InvariantCulture);
             }
@@ -45,23 +45,22 @@ namespace GamificationPortal.Controls
             }
         }
 
-        protected void ASPxButton1_Click(object sender, EventArgs e)
+       
+
+       
+
+        protected void btnConfirmDropMission_Click(object sender, EventArgs e)
         {
             (new MissionsDal()).DropCurrentMission(AuthProvider.UserKey(Session));
             LoadData();
         }
 
-        protected void btnCompleteMission_Click(object sender, EventArgs e)
+        protected void btnConfirmSubmit_Click(object sender, EventArgs e)
         {
             (new MissionsDal()).SubmitCurrentMission(Convert.ToInt32(tbMissionId.Value), AuthProvider.UserKey(Session));
             string completedBy = AuthProvider.GetUserFullName(Session);
             MailController.NotifyMissionOwnerMissionCompleted(Convert.ToInt32(tbMissionId.Value), completedBy);
             LoadData();
-           
         }
-
-       
-
-       
     }
 }
