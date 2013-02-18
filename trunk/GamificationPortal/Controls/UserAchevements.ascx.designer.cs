@@ -67,24 +67,6 @@ namespace GamificationPortal.Controls {
         protected global::DevExpress.Web.ASPxClasses.ContentControl ContentControl1;
         
         /// <summary>
-        /// ASPxPanel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel.ASPxPanel ASPxPanel2;
-        
-        /// <summary>
-        /// PanelContent1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel.PanelContent PanelContent1;
-        
-        /// <summary>
         /// gvBackgrounds control.
         /// </summary>
         /// <remarks>
@@ -94,24 +76,6 @@ namespace GamificationPortal.Controls {
         protected global::DevExpress.Web.ASPxGridView.ASPxGridView gvBackgrounds;
         
         /// <summary>
-        /// ASPxPanel3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel.ASPxPanel ASPxPanel3;
-        
-        /// <summary>
-        /// PanelContent2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel.PanelContent PanelContent2;
-        
-        /// <summary>
         /// gvTitles control.
         /// </summary>
         /// <remarks>
@@ -119,24 +83,6 @@ namespace GamificationPortal.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView.ASPxGridView gvTitles;
-        
-        /// <summary>
-        /// ASPxPanel4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel.ASPxPanel ASPxPanel4;
-        
-        /// <summary>
-        /// PanelContent3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel.PanelContent PanelContent3;
         
         /// <summary>
         /// gvMisc control.

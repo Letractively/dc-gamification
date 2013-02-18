@@ -19,15 +19,8 @@ namespace GamificationPortal.App
       
         public string RankDescription;
 
-        public string UserAvatarUrl 
-        { 
-            get
-            {
-                return _userAvatar;
-            }
-            set { _userAvatar = string.Format("~/Images/Users/{0}", value); }
-        }
-
+        public string UserAvatarUrl;
+        
         public int CompletedMissions;
         public int FailedMissions;
         public string Specialization;

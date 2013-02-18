@@ -31,6 +31,15 @@ namespace GamificationPortal {
         protected global::DevExpress.Web.ASPxClasses.ContentControl ContentControl1;
         
         /// <summary>
+        /// pbStageProgress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxProgressBar pbStageProgress;
+        
+        /// <summary>
         /// LeaderPreviewDev control.
         /// </summary>
         /// <remarks>

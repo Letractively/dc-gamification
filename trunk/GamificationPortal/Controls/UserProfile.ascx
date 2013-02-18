@@ -78,14 +78,18 @@
 </div>
 <dx:ASPxPopupControl ID="PopupControlUploadAvatar" ClientIDMode="Static" runat="server" Height="166px" Width="425px"
     EnableCallbackAnimation="True" Modal="True"
-    PopupElementID="btnChangeProfile" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Theme="" HeaderText="Manage">
+    PopupElementID="btnChangeProfile" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Theme="" HeaderText="Manage profile" style="text-align: left;"
+    ShowPageScrollbarWhenModal="True">
     <ContentCollection>
         <dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
             <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" Width="100%" ShowHeader="False">
                 <ContentPaddings Padding="0px" />
                 <PanelCollection>
                     <dx:PanelContent ID="PanelContent1" runat="server" SupportsDisabledAttribute="True">
-
+                        <p>
+                            You may upload images with size up to 128x128 pixels.<br/>
+                            Allowed file extensions .jpg, .jpeg, .jpe, .gif, .png
+                        </p>
                         <table style="width: 100%;">
                             <tr>
                                 <td colspan="2" style="text-align: center;">
@@ -127,7 +131,7 @@
                         </table>
 
                         <p style="text-align: right">
-                            <dx:ASPxButton ID="BtnUploadImage" ClientIDMode="Static" runat="server" Text="Upload avatar" AutoPostBack="False" Theme="" Style="text-align: right">
+                            <dx:ASPxButton ID="BtnUploadImage" ClientIDMode="Static" runat="server" Text="Upload avatar" AutoPostBack="False" Theme="" Style="text-align: right" align="right" HorizontalAlign="Right">
                                 <ClientSideEvents Click="function(s, e) {
 	UploadControlAvatar.Upload();
    

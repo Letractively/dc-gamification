@@ -46,6 +46,33 @@ namespace GamificationPortal.LeaderBoardControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblUserName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblUserName;
+        
+        /// <summary>
+        /// lblMissionsDone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblMissionsDone;
+        
+        /// <summary>
+        /// lblMissionsOnStage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblMissionsOnStage;
+        
+        /// <summary>
+        /// pbStageImpact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxProgressBar pbStageImpact;
     }
 }

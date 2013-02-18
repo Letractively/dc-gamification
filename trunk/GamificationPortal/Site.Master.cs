@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Providers.Entities;
 using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using DevExpress.Web.ASPxEditors;
 using GamificationPortal.Account;
 using GamificationPortal.App;
@@ -86,7 +87,7 @@ namespace GamificationPortal
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UserFullNameSection.Visible = false;
            
             NavigationMenu.Items.FindByName("Administration").Visible = Request.IsAuthenticated && (AuthProvider.IsUserInRole(Session, AuthRoles.SystemAdmin)
                                                                     || AuthProvider.IsUserInRole(Session, AuthRoles.Admin)
@@ -95,12 +96,9 @@ namespace GamificationPortal
             NavigationMenu.Items.FindByName("Profile").Visible = Request.IsAuthenticated && Page.User.Identity.IsAuthenticated;
             if (Page.User.Identity.IsAuthenticated)
             {
-
-                var control = LoginViewControl.FindControl("UserFullName");
-                if (control != null)
-                {
-                    (control as ASPxLabel).Text = AuthProvider.GetUserFullName(Session);
-                }
+                UserFullNameSection.Visible = true;
+                UserFullNameSection.InnerHtml = "Hello, " + AuthProvider.GetUserFullName(Session);
+               
                 CheckRewardsNotification();
             }
            
@@ -114,7 +112,16 @@ namespace GamificationPortal
                 foreach (DataRow row in rewardsList.Tables[0].Rows)
                 {
                     var scriptName = "ShowRewarScreen_" + row.ItemArray[0].ToString();
-                    ScriptManager.RegisterStartupScript(this, GetType(), scriptName, string.Format("ShowRewardNotification('{0}', '{1}', '{2}');", row.ItemArray[2], row.ItemArray[5], row.ItemArray[6]), true);
+                    var rewardMessageLabel = RewardsNotification.FindControl("rewardMessage");
+                    var rewardImage = RewardsNotification.FindControl("rewardImage");
+                    if (rewardMessageLabel != null)
+                    {
+                        (rewardMessageLabel as HtmlGenericControl).InnerHtml = row.ItemArray[5].ToString();
+                        (rewardImage as HtmlImage).Src = string.Format("../Images/Badges/{0}.png", row.ItemArray[6]);
+                        
+                        ScriptManager.RegisterStartupScript(this, GetType(), scriptName, "NotificationPopupScreen.Show();", true);      
+                    }
+                  
                 }
                
                

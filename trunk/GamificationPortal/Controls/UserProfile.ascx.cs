@@ -23,13 +23,26 @@ namespace GamificationPortal.Controls
             if (profile != null)
             {
                 lblUserFullName.InnerText = profile.FullName;
-                imgUserAvatar.ImageUrl = profile.UserAvatarUrl;
+                if (!string.IsNullOrEmpty(profile.UserAvatarUrl))
+                {
+                    imgUserAvatar.ImageUrl = string.Format("~/Images/Users/{0}/{1}", Page.User.Identity.Name, profile.UserAvatarUrl);
+                    imgAvatarPreview.ImageUrl = string.Format("~/Images/Users/{0}/{1}", Page.User.Identity.Name, profile.UserAvatarUrl); 
+                }
+                else
+                {
+                    imgUserAvatar.ImageUrl = "~/Images/Users/default.jpeg";
+                    imgAvatarPreview.ImageUrl = "~/Images/Users/default.jpeg";
+                }
+                
                 if (!string.IsNullOrEmpty(profile.UserEmblemUrl))
                 {
                     imgUserEmblem.ImageUrl = string.Format("~/Images/Users/{0}/{1}", Page.User.Identity.Name,  profile.UserEmblemUrl);    
                 }
+                else
+                {
+                    imgUserEmblem.ImageUrl = "~/Images/EmptyImage.png";
+                }
                 
-                imgAvatarPreview.ImageUrl = profile.UserAvatarUrl;
                 lblSpecialization.InnerText = profile.Specialization;
                 lblRankDescription.Text = profile.RankDescription;
 
@@ -39,8 +52,8 @@ namespace GamificationPortal.Controls
                 pbExpirience.Value = profile.Expirience;
                 pbExpirience.Position = profile.Expirience;
 
-                lblCompletedMissionsCount.Text = profile.CompletedMissions.ToString();
-                lblFailedMissionsCount.Text = profile.FailedMissions.ToString();
+                lblCompletedMissionsCount.Text = profile.CompletedMissions.ToString(CultureInfo.InvariantCulture);
+                lblFailedMissionsCount.Text = profile.FailedMissions.ToString(CultureInfo.InvariantCulture);
                 
                 lblTotalBadges.Text = _dal.GetTotalBadgesCount().ToString(CultureInfo.InvariantCulture);
                 lblUnlockedBadges.Text = _dal.GetUnlockedBadgesCount(AuthProvider.UserKey(Session)).ToString(CultureInfo.InvariantCulture);
@@ -67,12 +80,20 @@ namespace GamificationPortal.Controls
             if (!uploadedFile.IsValid)
                 return "File is not valid";
 
+            var usersDal = new UsersDal();
          
             var fileExtension = GetExtension(uploadedFile.FileName);
            
             var guid = Guid.NewGuid();
+           
+            var dirPath = MapPath(UploadDirectory + AuthProvider.GetNameWithoutDomain(Page.User.Identity.Name));
+            if (!Directory.Exists(dirPath))
+            {
+                Directory.CreateDirectory(dirPath);
 
-            string fileName = Path.Combine(MapPath(UploadDirectory), guid.ToString() + fileExtension);
+            }
+
+            string fileName = Path.Combine(dirPath, guid.ToString() + fileExtension);
             uploadedFile.SaveAs(fileName, true);
 
             //create a Bitmap from the file and add it to the list
@@ -84,7 +105,27 @@ namespace GamificationPortal.Controls
             }
 
 
-            (new UsersDal()).RegisterNewUserAvatar(guid.ToString() + fileExtension, AuthProvider.UserKey(Session));
+            usersDal.RegisterNewUserAvatar(guid.ToString() + fileExtension, AuthProvider.UserKey(Session));
+
+            //clear old Data
+           
+            var emblemKey = usersDal.GetUserEmblem(AuthProvider.UserKey(Session));
+            var avatarKey = usersDal.GetUserAvatar(AuthProvider.UserKey(Session));
+
+            var filePath1 = dirPath + "\\" + (avatarKey ?? string.Empty);
+            var filePath2 = dirPath + "\\" + (emblemKey ?? string.Empty);
+
+            foreach (var f in Directory.GetFiles(dirPath))
+            {
+                try
+                {
+                    if ((f != filePath1) && (f != filePath2))
+                        File.Delete(f);
+                }
+                catch (Exception)
+                {
+                }
+            }
             return string.Empty;
         }
 
@@ -97,7 +138,7 @@ namespace GamificationPortal.Controls
 
         protected void btnRemove_Click(object sender, EventArgs e)
         {
-            (new UsersDal()).RegisterNewUserAvatar("default.jpeg", AuthProvider.UserKey(Session));
+            (new UsersDal()).RegisterNewUserAvatar(string.Empty, AuthProvider.UserKey(Session));
             ReloadData();
         }
     }
