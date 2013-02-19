@@ -40,6 +40,24 @@ namespace GamificationPortal {
         protected global::DevExpress.Web.ASPxTimer.ASPxTimer ASPxTimer1;
         
         /// <summary>
+        /// BannerSlider control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxImageSlider.ASPxImageSlider BannerSlider;
+        
+        /// <summary>
+        /// ASPxTimer2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer.ASPxTimer ASPxTimer2;
+        
+        /// <summary>
         /// ASPxHyperLink1 control.
         /// </summary>
         /// <remarks>

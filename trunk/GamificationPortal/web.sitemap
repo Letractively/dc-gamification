@@ -2,35 +2,39 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
 	<siteMapNode url="" title="Web Site">
 		<siteMapNode url="" title="General" type="soon">
-			<siteMapNode url="~/Default.aspx" title="Home Page" type=""/>
+			<siteMapNode url="~/Default.aspx" title="Home page" type=""/>
 			<siteMapNode url="~/Journey.aspx" title="Journey" type=""/>
 			<siteMapNode url="~/Missions.aspx" title="Missions" type=""/>
-			<siteMapNode url="~/LeaderBoard.aspx" title="LeaderBoard" type="update" />
 			<siteMapNode url="~/About.aspx" title="About"  type="soon" />
-			<siteMapNode url="~/SiteMap.aspx" title="Site Map" type="update" />
+			<siteMapNode url="~/SiteMap.aspx" title="Site map" type="update" />
 		</siteMapNode>
 		
 		<siteMapNode url="~/Profile.aspx" title="Profile" type="">
 			<siteMapNode url="" title="My State-room" type="" />
 			<siteMapNode url="" title="History" type=""/>
-			<siteMapNode url="" title="Achievements" type="soon"/>
-			<siteMapNode url="" title="Manage Missions" type="update"/>
+			<siteMapNode url="" title="Achievements" type="update"/>
+			<siteMapNode url="" title="Manage missions" type="update"/>
+		</siteMapNode>
+
+		<siteMapNode url="~/LeaderBoard.aspx" title="Leader board" type="update">
+			<siteMapNode url="" title="Current stage" type="update" />
+			<siteMapNode url="" title="General statistics" type="update" />
 		</siteMapNode>
 		
-		<siteMapNode url="" title="Store" type="soon">
-			<siteMapNode url="" title="Enhance Your Virtual Points" type="soon" />
+		<siteMapNode url="~/MarketPlace.aspx" title="Market place" type="soon">
+			<siteMapNode url="" title="Market place service" type="soon" />
 			
 		</siteMapNode>
 		
 		<siteMapNode url="~/Administration.aspx" title="Administration">
-			<siteMapNode url="" title="Users Manage" type="" />
-			<siteMapNode url="" title="Portal Configuration" type="update" />
-			<siteMapNode url="" title="Badges Manage" type="update" />
+			<siteMapNode url="" title="Users manage" type="" />
+			<siteMapNode url="" title="Portal configuration" type="update" />
+			<siteMapNode url="" title="Badges manage" type="update" />
 		</siteMapNode>
 		
 		<siteMapNode url="~/Account/" title="Account" >
 			<siteMapNode url="Login.aspx" title="Log in" type="" />
-			<siteMapNode url="~/Account/Manage.aspx" title="Manage Account"  type="soon" />
+			<siteMapNode url="~/Account/Manage.aspx" title="Manage account"  type="soon" />
 			<siteMapNode url="~/Account/RegisterExternalLogin.aspx" title="Register an external login" type="soon" />
 		</siteMapNode>
 		

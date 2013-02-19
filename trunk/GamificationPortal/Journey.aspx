@@ -90,7 +90,7 @@
 
                                     </ContentTemplate>
                                 </dx:NavBarGroup>
-                                <dx:NavBarGroup Text="Next stage is comming soon" Expanded="False">
+                                <dx:NavBarGroup Text="Next stage is coming soon" Expanded="False">
                                 </dx:NavBarGroup>
                             </Groups>
                             <ItemStyle VerticalAlign="Top" ForeColor="Black">

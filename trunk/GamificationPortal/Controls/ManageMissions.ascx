@@ -12,7 +12,7 @@
 <div class="mainContainerPanel">
     <div class="mainContainerBody">
         <div runat="server" id="MissionsReviewFrame">
-            <h3>Missions Vaiting for review</h3>
+            <h3>Missions waiting for review</h3>
             Total pending missions count :
             <dx:ASPxLabel ID="lblPendingMissionsCount" runat="server" Text=""></dx:ASPxLabel>
             <br />
@@ -23,7 +23,7 @@
 
         <br />
         <br />
-        <h3>Missions Total List</h3>
+        <h3>Missions total list</h3>
         <div>
 
             <dx:ASPxButton ID="btnCreateMission" runat="server" Text="Create new mission" Theme="" Width="151px" AutoPostBack="False">
