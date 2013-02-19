@@ -147,6 +147,10 @@ namespace GamificationPortal
         {
             ScriptManager.RegisterStartupScript(control, type, "ShowWelcomeScreen", "PopupProfileWelcomeScreen.Show();", true);
         }
-        
+
+        internal void ShowMissionApplyScreen(Control control, Type type)
+        {
+            ScriptManager.RegisterStartupScript(control, type, "ShowMissionApplyScreen", "PopupControlMissionApplyConfirmation.Show();", true);
+        }
     }
 }

@@ -358,6 +358,7 @@
     <Content Include="LeaderBoard.aspx" />
     <Content Include="LeaderBoardControls\LeaderPreview.ascx" />
     <Content Include="MailMissionCompleteTemplate.html" />
+    <Content Include="MarketPlace.aspx" />
     <Content Include="Missions.aspx" />
     <Content Include="packages.config" />
     <Content Include="Profile.aspx" />
@@ -671,6 +672,13 @@
     </Compile>
     <Compile Include="LeaderBoardControls\LeaderPreview.ascx.designer.cs">
       <DependentUpon>LeaderPreview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MarketPlace.aspx.cs">
+      <DependentUpon>MarketPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarketPlace.aspx.designer.cs">
+      <DependentUpon>MarketPlace.aspx</DependentUpon>
     </Compile>
     <Compile Include="Missions.aspx.cs">
       <DependentUpon>Missions.aspx</DependentUpon>

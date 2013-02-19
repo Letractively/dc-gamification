@@ -3,7 +3,9 @@
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxRatingControl" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPanel" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxRoundPanel" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -77,36 +79,38 @@
                     </ItemStyle>
 
                     <GroupContentTemplate>
-                        <table style="width: 100%; vertical-align: top; table-layout:fixed;">
+                        <table style="width: 100%; vertical-align: top; table-layout: fixed;">
                             <tr>
                                 <td>
                                     <h4>Details</h4>
                                 </td>
-                               
+
                             </tr>
                             <tr>
-                                <td style="vertical-align: top;word-wrap: break-word; white-space: normal;">
+                                <td style="vertical-align: top; word-wrap: break-word; white-space: normal;">
                                     <%# Container.EvalDataItem("Description") %>
                                 </td>
                             </tr>
                             <tr>
-                                 <td>
+                                <td>
                                     <h4>Skills required</h4>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="vertical-align: top;word-wrap: break-word; ">
-                                    
-                                        <%# Container.EvalDataItem("SkillsRequired") %>
+                                <td style="vertical-align: top; word-wrap: break-word;">
+
+                                    <%# Container.EvalDataItem("SkillsRequired") %>
                                 </td>
                             </tr>
                             <tr>
-                                <td><br/></td>
+                                <td>
+                                    <br />
+                                </td>
                             </tr>
                             <tr>
                                 <td>
                                     <dx:ASPxButton ID="BtnTakeMission" runat="server" OnClick="BtnTakeMission_Click" Text="Take mission" CommandArgument='<%# Container.EvalDataItem("MissionId") %>'
-                                        Visible='<%# !IsMissionInProgress(Container.EvalDataItem("StatusDescription")) %>'>
+                                        Visible='<%# !IsMissionInProgress(Container.EvalDataItem("StatusDescription")) %>' AutoPostBack="True">
                                     </dx:ASPxButton>
 
                                     <dx:ASPxLabel ID="LblMissionIsInProgress" runat="server" Text="Mission is in progress" Visible='<%# IsMissionInProgress(Container.EvalDataItem("StatusDescription")) %>'>
@@ -125,35 +129,53 @@
             </div>
         </div>
     </div>
-    <dx:ASPxPopupControl ID="PopupCOntrolConfirmation" runat="server" Width="368px">
+    <dx:ASPxPopupControl ID="PopupControlMissionApplyConfirmation" ClientIDMode="Static" runat="server" Width="368px" HeaderText="Take mission" CloseAction="CloseButton" EnableCallbackAnimation="True" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter">
         <ContentCollection>
-<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
-    
-     <table style="width: 100%;">
-                                            <tr>
-                                                <td style="text-align: center; height: 65px;">
-                                                    <img alt="" src="Images/info.png" />
-                                                </td>
-                                                <td colspan="2">
-                                                    Do you really wants to take this mission?
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3" />
+            <dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+                <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" DefaultButton="ASPxButton2" ShowHeader="False" Width="100%">
+                    <ContentPaddings Padding="0px" />
+                    <PanelCollection>
+                        <dx:PanelContent ID="PanelContent1" runat="server" SupportsDisabledAttribute="True">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="text-align: center; height: 65px;">
+                                        <img alt="" src="Images/info.png" />
+                                    </td>
+                                    <td colspan="2">Good luck with your mission.
+                                        <br />
+                                        We're sure you will cope with it easily.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" />
 
-                                            </tr>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <table style="width: 100%">
                                             <tr>
-                                                <td colspan="3">
-                                                    <dx:ASPxButton ID="btnConfirmOk" runat="server" Text="OK" AutoPostBack="True" EnableTheming="True" Width="100px" align="center">
+                                                <td>
+                                                    <dx:ASPxButton ID="btnMissionApplyOk" runat="server" Text="Take mission" AutoPostBack="True" EnableTheming="True" Width="100px" align="right" OnClick="btnConfirmOk_Click">
                                                         <ClientSideEvents Click="function(s, e) {
-	PopupCOntrolConfirmation.Hide(); 
+	PopupControlMissionApplyConfirmation.Hide(); 
 }" />
                                                     </dx:ASPxButton>
-                                                
+                                                </td>
+                                                <td>
+                                                    <dx:ASPxButton ID="btnMissionApplyCancel" runat="server" Text="Reject" AutoPostBack="False" EnableTheming="True" Width="100px" align="left">
+                                                        <ClientSideEvents Click="function(s, e) {
+	PopupControlMissionApplyConfirmation.Hide(); 
+}" />
+                                                    </dx:ASPxButton>
+                                                </td>
                                             </tr>
                                         </table>
-
-</dx:PopupControlContentControl>
-</ContentCollection>
+                                </tr>
+                            </table>
+                        </dx:PanelContent>
+                    </PanelCollection>
+                </dx:ASPxRoundPanel>
+            </dx:PopupControlContentControl>
+        </ContentCollection>
     </dx:ASPxPopupControl>
 </asp:Content>

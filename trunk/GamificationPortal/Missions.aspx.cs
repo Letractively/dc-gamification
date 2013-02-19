@@ -8,6 +8,7 @@ namespace GamificationPortal
 {
     public partial class Missions : Page
     {
+        MissionsDal _dal = new MissionsDal();
         protected void Page_Load(object sender, EventArgs e)
         {
             ReloadData();
@@ -46,21 +47,20 @@ namespace GamificationPortal
             {
                 if ((sender as ASPxButton).CommandArgument != null)
                 {
-                    var missionId = (sender as ASPxButton).CommandArgument;
-                    var dal = new MissionsDal();
-                    var isLimitDepleted = dal.IsMissionsLimitForUserDepleted(AuthProvider.UserKey(Session));
-                    if (!isLimitDepleted)
+
+                    var isLimitDepleted = _dal.IsMissionsLimitForUserDepleted(AuthProvider.UserKey(Session));
+                    if (isLimitDepleted)
                     {
-                        dal.AssignMissionToUser(missionId, AuthProvider.UserKey(Session));
-                        string takenBy = AuthProvider.GetUserFullName(Session);
-                        MailController.NotifyMissionOwnerMissionWasTaken(Convert.ToInt32(missionId), takenBy);
+                        Session.Remove("ApplyMissionId");
+                        ((SiteMaster)Page.Master).ShowErrorMessage("You are not allowed to take more then one mission at the same time!", this, GetType());
                     }
                     else
                     {
-                        ((SiteMaster)Page.Master).ShowErrorMessage("You are not allowed to take more then one mission at the same time!", this, GetType());
+                        Session["ApplyMissionId"] = (sender as ASPxButton).CommandArgument;
+                        ((SiteMaster)Page.Master).ShowMissionApplyScreen(this, GetType());
                     }
                 }
-                ReloadData();
+                
                 
             }
         }
@@ -70,6 +70,21 @@ namespace GamificationPortal
             if (evalDataItem != null && evalDataItem.ToString() == "In Progress")
                 return true;
             return false;
+        }
+
+        private void ApplyesToTheMission()
+        {
+            if (Session["ApplyMissionId"] != null)
+            _dal.AssignMissionToUser(Session["ApplyMissionId"].ToString(), AuthProvider.UserKey(Session));
+            string takenBy = AuthProvider.GetUserFullName(Session);
+            MailController.NotifyMissionOwnerMissionWasTaken(Convert.ToInt32(Session["ApplyMissionId"]), takenBy);
+            Session.Remove("ApplyMissionId");
+            ReloadData();
+        }
+
+        protected void btnConfirmOk_Click(object sender, EventArgs e)
+        {
+            ApplyesToTheMission();
         }
     }
 }
