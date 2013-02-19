@@ -106,7 +106,8 @@
         <asp:HiddenField ID="tbMissionId" runat="server" />
     </div>
 </div>
-<dx:ASPxPopupControl ID="popupScreenDropMission" ClientIDMode="Static" runat="server" Height="176px" Width="397px" EnableCallbackAnimation="True" HeaderText="Confirm mission drop." PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ShowPageScrollbarWhenModal="True" CloseAction="CloseButton" ShowCloseButton="False">
+<dx:ASPxPopupControl ID="popupScreenDropMission" ClientIDMode="Static" runat="server" Height="176px" Width="397px" EnableCallbackAnimation="True" 
+    HeaderText="Drop Mission" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ShowPageScrollbarWhenModal="True" CloseAction="CloseButton" ShowCloseButton="False">
     <ContentCollection>
         <dx:PopupControlContentControl ID="PopupControlContentControl2" runat="server" SupportsDisabledAttribute="True">
             <dx:ASPxRoundPanel ID="ASPxRoundPanel2" runat="server" DefaultButton="ASPxButton2" ShowHeader="False" Width="100%">
@@ -118,7 +119,7 @@
                                 <td style="text-align: center; height: 65px;">
                                     <img alt="" src="Images/info.png" />
                                 </td>
-                                <td>Do you really wants to drop this mission?
+                                <td>What's up, buddy? Don't give up, feel the challenge!
                                 </td>
                             </tr>
                             <tr>
@@ -131,14 +132,14 @@
                                         <table style="width: 100%">
                                             <tr>
                                                 <td>
-                                                    <dx:ASPxButton ID="btnConfirmDropMission" runat="server" Text="Drop" AutoPostBack="False" EnableTheming="True" Width="100px" align="center" OnClick="btnConfirmDropMission_Click">
+                                                    <dx:ASPxButton ID="btnConfirmDropMission" runat="server" Text="Drop mission" AutoPostBack="False" EnableTheming="True" Width="100px" align="right" OnClick="btnConfirmDropMission_Click">
                                                         <ClientSideEvents Click="function(s, e) {
 	popupScreenDropMission.Hide(); 
 }" />
                                                     </dx:ASPxButton>
                                                 </td>
                                                 <td>
-                                                    <dx:ASPxButton ID="btnDropCancel" runat="server" Text="Cancel" AutoPostBack="False" EnableTheming="True" Width="100px" align="center">
+                                                    <dx:ASPxButton ID="btnDropCancel" runat="server" Text="Cancel" AutoPostBack="False" EnableTheming="True" Width="100px" align="left">
                                                         <ClientSideEvents Click="function(s, e) {
 	popupScreenDropMission.Hide(); 
 }" />
@@ -146,11 +147,7 @@
                                                 </td>
                                             </tr>
                                         </table>
-
                                     </div>
-
-
-
                                 </td>
                             </tr>
                         </table>
@@ -161,7 +158,8 @@
     </ContentCollection>
 </dx:ASPxPopupControl>
 
-<dx:ASPxPopupControl ID="PopupControlSubmitMission" ClientIDMode="Static" runat="server" Height="176px" Width="397px" EnableCallbackAnimation="True" HeaderText="Confirm mission submit." PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ShowPageScrollbarWhenModal="True" CloseAction="CloseButton" ShowCloseButton="False">
+<dx:ASPxPopupControl ID="PopupControlSubmitMission" ClientIDMode="Static" runat="server" Height="176px" Width="397px" EnableCallbackAnimation="True" 
+    HeaderText="Submit mission" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ShowPageScrollbarWhenModal="True" CloseAction="CloseButton" ShowCloseButton="False">
     <ContentCollection>
         <dx:PopupControlContentControl ID="PopupControlContentControl1" runat="server" SupportsDisabledAttribute="True">
             <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" DefaultButton="ASPxButton2" ShowHeader="False" Width="100%">
@@ -173,7 +171,7 @@
                                 <td style="text-align: center; height: 65px;">
                                     <img alt="" src="Images/info.png" />
                                 </td>
-                                <td>Do you really wants to submit this mission?
+                                <td>Well begun is half done! Hope your score will be really good. Just review once again your mission.
                                 </td>
                             </tr>
                             <tr>
@@ -186,14 +184,14 @@
                                         <table style="width: 100%">
                                             <tr>
                                                 <td>
-                                                    <dx:ASPxButton ID="btnConfirmSubmit" runat="server" Text="Submit" AutoPostBack="False" EnableTheming="True" Width="100px" align="center" OnClick="btnConfirmSubmit_Click" >
+                                                    <dx:ASPxButton ID="btnConfirmSubmit" runat="server" Text="Submit" AutoPostBack="False" EnableTheming="True" Width="100px" align="right" OnClick="btnConfirmSubmit_Click" >
                                                         <ClientSideEvents Click="function(s, e) {
 	PopupControlSubmitMission.Hide(); 
 }" />
                                                     </dx:ASPxButton>
                                                 </td>
                                                 <td>
-                                                    <dx:ASPxButton ID="btnSubmitCancel" runat="server" Text="Cancel" AutoPostBack="False" EnableTheming="True" Width="100px" align="center">
+                                                    <dx:ASPxButton ID="btnSubmitCancel" runat="server" Text="Cancel" AutoPostBack="False" EnableTheming="True" Width="100px" align="left">
                                                         <ClientSideEvents Click="function(s, e) {
 	PopupControlSubmitMission.Hide(); 
 }" />

@@ -79,6 +79,14 @@
                                             SelectedTop="32px" SelectedLeft="152px" />
                                     </Image>
                                 </dx:MenuItem>
+                                 <dx:MenuItem Text="Market place" NavigateUrl="~/MarketPlace.aspx">
+                                    <Image>
+                                        <SpriteProperties
+                                            Top="2px" Left="222px"
+                                            HottrackedTop="32px" HottrackedLeft="222px"
+                                            SelectedTop="32px" SelectedLeft="222px" />
+                                    </Image>
+                                </dx:MenuItem>
                                 <dx:MenuItem Text="Administration" Name="Administration" NavigateUrl="~/Administration.aspx">
                                     <Image>
                                         <SpriteProperties Left="121px" Top="2px"

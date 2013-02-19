@@ -49,21 +49,48 @@ namespace GamificationPortal {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl MissionsContainerNoMissions;
         
         /// <summary>
-        /// PopupCOntrolConfirmation control.
+        /// PopupControlMissionApplyConfirmation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPopupControl.ASPxPopupControl PopupCOntrolConfirmation;
+        protected global::DevExpress.Web.ASPxPopupControl.ASPxPopupControl PopupControlMissionApplyConfirmation;
         
         /// <summary>
-        /// btnConfirmOk control.
+        /// ASPxRoundPanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxButton btnConfirmOk;
+        protected global::DevExpress.Web.ASPxRoundPanel.ASPxRoundPanel ASPxRoundPanel1;
+        
+        /// <summary>
+        /// PanelContent1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxPanel.PanelContent PanelContent1;
+        
+        /// <summary>
+        /// btnMissionApplyOk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxButton btnMissionApplyOk;
+        
+        /// <summary>
+        /// btnMissionApplyCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxButton btnMissionApplyCancel;
     }
 }
