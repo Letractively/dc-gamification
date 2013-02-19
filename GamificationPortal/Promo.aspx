@@ -2,6 +2,7 @@
 
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTimer" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageSlider" Assembly="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,32 @@
         <div id="content">
             <div id="box">
                 
+
                 <table align="center" style="width: 960px;">
+                    <tr>
+                        <td>
+                            <dx:ASPxImageSlider ID="BannerSlider" ClientIDMode="Static" runat="server" Height="250px" Width="100%" EncodeHtml="False" Style="top: -5px;">
+        <Items>
+            <dx:ImageSliderItem ImageUrl="Images/layout/theme/banner1.png" Name="BeTheFirst"  />
+            <dx:ImageSliderItem ImageUrl="Images/layout/theme/banner2.png" Name="Missions"  />
+            <dx:ImageSliderItem ImageUrl="Images/layout/theme/banner3.png" />
+            <dx:ImageSliderItem ImageUrl="Images/layout/theme/banner4.png" />
+        </Items>
+        
+        <SettingsImageArea ImageSizeMode="ActualSizeOrFit" NavigationButtonVisibility="None" />
+        <SettingsNavigationBar Mode="Dots" />
+    </dx:ASPxImageSlider>
+    <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="20000">
+        <ClientSideEvents Tick="function(s, e) {
+            var index=BannerSlider.GetActiveItemIndex()+1;
+            if(index&gt;=(BannerSlider.GetItemCount()))
+                index=0;
+            BannerSlider.SetActiveItemIndex(index);
+    
+}" />
+            </dx:ASPxTimer>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <div style="height: 250px;">
@@ -65,7 +91,7 @@
                     </tr>
                     
                 </table>
-               <%-- <img src="Images/layout/theme/LogoBig.png" style="position: relative; top:-450px;left: 225px;" />--%>
+              
             </div>
         </div>
         <div id="footer">

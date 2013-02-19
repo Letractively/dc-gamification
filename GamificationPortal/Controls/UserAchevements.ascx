@@ -155,7 +155,7 @@
                                             </div>
                                         </td>
                                         <td style="vertical-align: top;">
-                                            <h2 class="withShadow" style="color: #ffffff">Miscs</h2>
+                                            <h2 class="withShadow" style="color: #ffffff">Misc</h2>
                                             <div class="mainContainerPanel">
                                                 <div class="mainContainerBody">
 

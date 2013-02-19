@@ -60,8 +60,8 @@ DC Gamification Team
 
             <h3 >Hi {0}!</h3>
             <p >
-{1} marked your '{2}' mission as <b>completed<b/>. <br/>
-Now it’s your turn to mark it as <b>'Verified' <b/> or <b>'Failed' <b/>.
+{1} marked your '{2}' mission as <b>completed</b>. <br/>
+Now it’s your turn to mark it as <b>'Verified' </b> or <b>'Failed' </b>.
 <br/>
 <br/>
 Cheers, <br/>
